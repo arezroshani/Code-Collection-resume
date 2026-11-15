@@ -1,0 +1,198 @@
+[{
+  "_id": {
+    "$oid": "6a3661624eb409d5b0150a54"
+  },
+  "EmployeeID": 111,
+  "NationalCode": "1234567890",
+  "Name": "رضا احمدی",
+  "Age": 34,
+  "Gender": "مرد",
+  "Job": "صندوقدار",
+  "WorkingHours": 8,
+  "WorkHistory": "5",
+  "Salary": {
+    "$numberDecimal": "15000000.00"
+  },
+  "Phone": "09120001111",
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a3661624eb409d5b0150a55"
+  },
+  "EmployeeID": 222,
+  "NationalCode": "2131415161",
+  "Name": "نسرین حقانی",
+  "Age": 28,
+  "Gender": "زن",
+  "Job": "داروساز",
+  "WorkingHours": 7,
+  "WorkHistory": "3",
+  "Salary": {
+    "$numberDecimal": "22000000.00"
+  },
+  "Phone": "09123334444",
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a3661624eb409d5b0150a56"
+  },
+  "EmployeeID": 333,
+  "NationalCode": "1213141516",
+  "Name": "کیوان رستمی",
+  "Age": 40,
+  "Gender": "مرد",
+  "Job": "مدیر فروش",
+  "WorkingHours": 9,
+  "WorkHistory": "10",
+  "Salary": {
+    "$numberDecimal": "30000000.00"
+  },
+  "Phone": "09381231234",
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a3661624eb409d5b0150a57"
+  },
+  "EmployeeID": 444,
+  "NationalCode": "3639311363",
+  "Name": "سارا شیرازی",
+  "Age": 33,
+  "Gender": "زن",
+  "Job": "مسئول انبار",
+  "WorkingHours": 8,
+  "WorkHistory": "4",
+  "Salary": {
+    "$numberDecimal": "18000000.00"
+  },
+  "Phone": "09211112222",
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a3661624eb409d5b0150a58"
+  },
+  "EmployeeID": 555,
+  "NationalCode": "2426282021",
+  "Name": "حمید عرب",
+  "Age": 29,
+  "Gender": "مرد",
+  "Job": "کمک داروساز",
+  "WorkingHours": 8,
+  "WorkHistory": "2",
+  "Salary": {
+    "$numberDecimal": "14000000.00"
+  },
+  "Phone": "09124445566",
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a3661624eb409d5b0150a59"
+  },
+  "EmployeeID": 666,
+  "NationalCode": "9087654321",
+  "Name": "الهام امیری",
+  "Age": 31,
+  "Gender": "زن",
+  "Job": "اپراتور نسخه",
+  "WorkingHours": 7,
+  "WorkHistory": "3",
+  "Salary": {
+    "$numberDecimal": "16000000.00"
+  },
+  "Phone": "09356667788",
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a3661624eb409d5b0150a5a"
+  },
+  "EmployeeID": 777,
+  "NationalCode": "0022334455",
+  "Name": "حمید نوروزی",
+  "Age": 45,
+  "Gender": "مرد",
+  "Job": "مدیر داخلی",
+  "WorkingHours": 9,
+  "WorkHistory": "12",
+  "Salary": {
+    "$numberDecimal": "32000000.00"
+  },
+  "Phone": "09129990000",
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a3661624eb409d5b0150a5b"
+  },
+  "EmployeeID": 888,
+  "NationalCode": "9396919099",
+  "Name": "مریم پاکدل",
+  "Age": 27,
+  "Gender": "زن",
+  "Job": "صندوقدار",
+  "WorkingHours": 7,
+  "WorkHistory": "1",
+  "Salary": {
+    "$numberDecimal": "12500000.00"
+  },
+  "Phone": "09351112223",
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a3661624eb409d5b0150a5c"
+  },
+  "EmployeeID": 999,
+  "NationalCode": "6162636661",
+  "Name": "سعید امامی",
+  "Age": 31,
+  "Gender": "مرد",
+  "Job": "اپراتور نسخه",
+  "WorkingHours": 7,
+  "WorkHistory": "8",
+  "Salary": {
+    "$numberDecimal": "15000000.00"
+  },
+  "Phone": "09350099166",
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a3661624eb409d5b0150a5d"
+  },
+  "EmployeeID": 1010,
+  "NationalCode": "0908070605",
+  "Name": "محسن نادری",
+  "Age": 38,
+  "Gender": "مرد",
+  "Job": "داروساز",
+  "WorkingHours": 8,
+  "WorkHistory": "8",
+  "Salary": {
+    "$numberDecimal": "26000000.00"
+  },
+  "Phone": "09121231231",
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a3661624eb409d5b0150a5e"
+  },
+  "EmployeeID": 1111,
+  "NationalCode": "7892345601",
+  "Name": "علی رضایی",
+  "Age": 30,
+  "Gender": "مرد",
+  "Job": "حسابدار",
+  "WorkingHours": 7,
+  "WorkHistory": "3",
+  "Salary": {
+    "$numberDecimal": "15500000.00"
+  },
+  "Phone": "09126668899",
+  "IsDeleted": false
+}]

@@ -1,0 +1,286 @@
+[{
+  "_id": {
+    "$oid": "6a365bab4eb409d5b0150a28"
+  },
+  "SaleID": 1,
+  "SaleDate": {
+    "$date": "2026-01-20T00:00:00.000Z"
+  },
+  "PaymentType": "Cash",
+  "EmployeeID": 111,
+  "PatientID": 1,
+  "IsDeleted": false,
+  "OriginalPrice": {
+    "$numberDecimal": "190000.00"
+  },
+  "DiscountPercentage": {
+    "$numberDecimal": "0.00"
+  },
+  "FinalPrice": {
+    "$numberDecimal": "190000.00"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a365bab4eb409d5b0150a29"
+  },
+  "SaleID": 2,
+  "SaleDate": {
+    "$date": "2026-01-24T00:00:00.000Z"
+  },
+  "PaymentType": "Card",
+  "EmployeeID": 111,
+  "PatientID": 2,
+  "IsDeleted": false,
+  "OriginalPrice": {
+    "$numberDecimal": "144000.00"
+  },
+  "DiscountPercentage": {
+    "$numberDecimal": "0.00"
+  },
+  "FinalPrice": {
+    "$numberDecimal": "144000.00"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a365bab4eb409d5b0150a2a"
+  },
+  "SaleID": 3,
+  "SaleDate": {
+    "$date": "2026-01-28T00:00:00.000Z"
+  },
+  "PaymentType": "Cash",
+  "EmployeeID": 333,
+  "PatientID": 3,
+  "IsDeleted": false,
+  "OriginalPrice": {
+    "$numberDecimal": "140000.00"
+  },
+  "DiscountPercentage": {
+    "$numberDecimal": "0.00"
+  },
+  "FinalPrice": {
+    "$numberDecimal": "140000.00"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a365bab4eb409d5b0150a2b"
+  },
+  "SaleID": 4,
+  "SaleDate": {
+    "$date": "2026-02-02T00:00:00.000Z"
+  },
+  "PaymentType": "Card",
+  "EmployeeID": 111,
+  "PatientID": 4,
+  "IsDeleted": false,
+  "OriginalPrice": {
+    "$numberDecimal": "150000.00"
+  },
+  "DiscountPercentage": {
+    "$numberDecimal": "5.00"
+  },
+  "FinalPrice": {
+    "$numberDecimal": "142500.00"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a365bab4eb409d5b0150a2c"
+  },
+  "SaleID": 5,
+  "SaleDate": {
+    "$date": "2026-02-07T00:00:00.000Z"
+  },
+  "PaymentType": "Cash",
+  "EmployeeID": 888,
+  "PatientID": 5,
+  "IsDeleted": false,
+  "OriginalPrice": {
+    "$numberDecimal": "96000.00"
+  },
+  "DiscountPercentage": {
+    "$numberDecimal": "5.00"
+  },
+  "FinalPrice": {
+    "$numberDecimal": "91200.00"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a365bab4eb409d5b0150a2d"
+  },
+  "SaleID": 6,
+  "SaleDate": {
+    "$date": "2026-02-14T00:00:00.000Z"
+  },
+  "PaymentType": "Card",
+  "EmployeeID": 888,
+  "PatientID": 6,
+  "IsDeleted": false,
+  "OriginalPrice": {
+    "$numberDecimal": "52000.00"
+  },
+  "DiscountPercentage": {
+    "$numberDecimal": "5.00"
+  },
+  "FinalPrice": {
+    "$numberDecimal": "49400.00"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a365bab4eb409d5b0150a2e"
+  },
+  "SaleID": 7,
+  "SaleDate": {
+    "$date": "2026-02-20T00:00:00.000Z"
+  },
+  "PaymentType": "Cash",
+  "EmployeeID": 333,
+  "PatientID": 7,
+  "IsDeleted": false,
+  "OriginalPrice": {
+    "$numberDecimal": "48000.00"
+  },
+  "DiscountPercentage": {
+    "$numberDecimal": "5.00"
+  },
+  "FinalPrice": {
+    "$numberDecimal": "45600.00"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a365bab4eb409d5b0150a2f"
+  },
+  "SaleID": 8,
+  "SaleDate": {
+    "$date": "2026-03-03T00:00:00.000Z"
+  },
+  "PaymentType": "Card",
+  "EmployeeID": 888,
+  "PatientID": 8,
+  "IsDeleted": false,
+  "OriginalPrice": {
+    "$numberDecimal": "83000.00"
+  },
+  "DiscountPercentage": {
+    "$numberDecimal": "18.00"
+  },
+  "FinalPrice": {
+    "$numberDecimal": "68060.00"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a365bab4eb409d5b0150a30"
+  },
+  "SaleID": 9,
+  "SaleDate": {
+    "$date": "2026-03-28T00:00:00.000Z"
+  },
+  "PaymentType": "Cash",
+  "EmployeeID": 111,
+  "PatientID": 9,
+  "IsDeleted": false,
+  "OriginalPrice": {
+    "$numberDecimal": "37000.00"
+  },
+  "DiscountPercentage": {
+    "$numberDecimal": "18.00"
+  },
+  "FinalPrice": {
+    "$numberDecimal": "30340.00"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a365bab4eb409d5b0150a31"
+  },
+  "SaleID": 10,
+  "SaleDate": {
+    "$date": "2026-03-28T00:00:00.000Z"
+  },
+  "PaymentType": "Cash",
+  "EmployeeID": 111,
+  "PatientID": 10,
+  "IsDeleted": false,
+  "OriginalPrice": {
+    "$numberDecimal": "75000.00"
+  },
+  "DiscountPercentage": {
+    "$numberDecimal": "18.00"
+  },
+  "FinalPrice": {
+    "$numberDecimal": "61500.00"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a365bab4eb409d5b0150a32"
+  },
+  "SaleID": 11,
+  "SaleDate": {
+    "$date": "2026-03-28T00:00:00.000Z"
+  },
+  "PaymentType": "Cash",
+  "EmployeeID": 111,
+  "PatientID": 11,
+  "IsDeleted": false,
+  "OriginalPrice": {
+    "$numberDecimal": "78000.00"
+  },
+  "DiscountPercentage": {
+    "$numberDecimal": "18.00"
+  },
+  "FinalPrice": {
+    "$numberDecimal": "63960.00"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a365bab4eb409d5b0150a33"
+  },
+  "SaleID": 12,
+  "SaleDate": {
+    "$date": "2026-04-14T00:00:00.000Z"
+  },
+  "PaymentType": "Card",
+  "EmployeeID": 888,
+  "PatientID": 12,
+  "IsDeleted": false,
+  "OriginalPrice": {
+    "$numberDecimal": "165000.00"
+  },
+  "DiscountPercentage": {
+    "$numberDecimal": "0.00"
+  },
+  "FinalPrice": {
+    "$numberDecimal": "165000.00"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a365bab4eb409d5b0150a34"
+  },
+  "SaleID": 13,
+  "SaleDate": {
+    "$date": "2026-04-28T00:00:00.000Z"
+  },
+  "PaymentType": "Card",
+  "EmployeeID": 888,
+  "PatientID": 13,
+  "IsDeleted": false,
+  "OriginalPrice": {
+    "$numberDecimal": "155000.00"
+  },
+  "DiscountPercentage": {
+    "$numberDecimal": "0.00"
+  },
+  "FinalPrice": {
+    "$numberDecimal": "155000.00"
+  }
+}]

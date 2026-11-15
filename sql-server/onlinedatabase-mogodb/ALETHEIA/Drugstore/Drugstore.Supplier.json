@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "6a36699f1d5b4d968415efa0"
+  },
+  "SupplierID": 1002,
+  "Name": "شهر دارو",
+  "Phone": "0213645",
+  "Email": "info@shahrdar.com",
+  "CompanyName": "شهر",
+  "Address": "بلوار کشاورز، پلاک ۲۱",
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a36699f1d5b4d968415efa1"
+  },
+  "SupplierID": 1003,
+  "Name": "کیمیا",
+  "Phone": "0218839",
+  "Email": "info@kimiya.com",
+  "CompanyName": "کیمیا",
+  "Address": "خیابان شریعتی، پلاک ۲۳",
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a36699f1d5b4d968415efa2"
+  },
+  "SupplierID": 1004,
+  "Name": "سینا",
+  "Phone": "0214490",
+  "Email": "info@sina.com",
+  "CompanyName": "سینا",
+  "Address": "خیابان پاسداران، پلاک ۸۹",
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a36699f1d5b4d968415efa3"
+  },
+  "SupplierID": 1005,
+  "Name": "تولید دارو",
+  "Phone": "0218852",
+  "Email": "info@toliddarou.com",
+  "CompanyName": "تولید",
+  "Address": "خیابان کارگر، پلاک ۱۰",
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a36699f1d5b4d968415efa4"
+  },
+  "SupplierID": 1006,
+  "Name": "رازی",
+  "Phone": "0216672",
+  "Email": "info@razi.com",
+  "CompanyName": "رازی",
+  "Address": "جاده مخصوص کرج، کیلومتر ۱۲",
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a36699f1d5b4d968415efa5"
+  },
+  "SupplierID": 1007,
+  "Name": "رامتین",
+  "Phone": "0218891",
+  "Email": "info@ramtin.com",
+  "CompanyName": "رامتین",
+  "Address": "چهارراه ولیعصر، پلاک ۸",
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a36699f1d5b4d968415efa6"
+  },
+  "SupplierID": 1008,
+  "Name": "فارمد",
+  "Phone": "0212221",
+  "Email": "info@pharmed.com",
+  "CompanyName": "فارمد",
+  "Address": "میدان آزادی، خیابان ۱۲",
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a36699f1d5b4d968415efa7"
+  },
+  "SupplierID": 1009,
+  "Name": "داروگر",
+  "Phone": "0213311",
+  "Email": "info@darougar.com",
+  "CompanyName": "داروگر",
+  "Address": "خیابان انقلاب، شماره ۵",
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a36699f1d5b4d968415efa8"
+  },
+  "SupplierID": 1012,
+  "Name": "بیوتیک",
+  "Phone": "0216622",
+  "Email": "info@biotic.com",
+  "CompanyName": "بیوتیک",
+  "Address": "شهرک غرب، بلوار ایران زمین",
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a36699f1d5b4d968415efa9"
+  },
+  "SupplierID": 1013,
+  "Name": "شیمی",
+  "Phone": "0214455",
+  "Email": "info@shimi.com",
+  "CompanyName": "شیمی",
+  "Address": "کرج، خیابان بهشتی، پلاک ۳",
+  "IsDeleted": 0
+}]

@@ -1,0 +1,180 @@
+[{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a3c"
+  },
+  "SaleID": 1,
+  "DrugID": 1000,
+  "Number": 2,
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a3d"
+  },
+  "SaleID": 1,
+  "DrugID": 1090,
+  "Number": 2,
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a3e"
+  },
+  "SaleID": 2,
+  "DrugID": 1010,
+  "Number": 3,
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a3f"
+  },
+  "SaleID": 3,
+  "DrugID": 1030,
+  "Number": 1,
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a40"
+  },
+  "SaleID": 3,
+  "DrugID": 1070,
+  "Number": 2,
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a41"
+  },
+  "SaleID": 4,
+  "DrugID": 1050,
+  "Number": 1,
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a42"
+  },
+  "SaleID": 4,
+  "DrugID": 1160,
+  "Number": 1,
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a43"
+  },
+  "SaleID": 5,
+  "DrugID": 1010,
+  "Number": 2,
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a44"
+  },
+  "SaleID": 6,
+  "DrugID": 1180,
+  "Number": 1,
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a45"
+  },
+  "SaleID": 7,
+  "DrugID": 1010,
+  "Number": 1,
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a46"
+  },
+  "SaleID": 8,
+  "DrugID": 1060,
+  "Number": 1,
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a47"
+  },
+  "SaleID": 8,
+  "DrugID": 1070,
+  "Number": 1,
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a48"
+  },
+  "SaleID": 9,
+  "DrugID": 1080,
+  "Number": 1,
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a49"
+  },
+  "SaleID": 10,
+  "DrugID": 1190,
+  "Number": 1,
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a4a"
+  },
+  "SaleID": 11,
+  "DrugID": 1000,
+  "Number": 1,
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a4b"
+  },
+  "SaleID": 11,
+  "DrugID": 1060,
+  "Number": 1,
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a4c"
+  },
+  "SaleID": 12,
+  "DrugID": 1150,
+  "Number": 1,
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a4d"
+  },
+  "SaleID": 12,
+  "DrugID": 1190,
+  "Number": 1,
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a4e"
+  },
+  "SaleID": 13,
+  "DrugID": 1000,
+  "Number": 2,
+  "IsDeleted": false
+},
+{
+  "_id": {
+    "$oid": "6a365de34eb409d5b0150a4f"
+  },
+  "SaleID": 13,
+  "DrugID": 1190,
+  "Number": 1,
+  "IsDeleted": false
+}]

@@ -1,0 +1,400 @@
+[{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b02"
+  },
+  "code": 1000,
+  "name": "استامینوفن",
+  "stock": 550,
+  "price": 40000,
+  "manufacturer": "تهران دارو",
+  "form": "قرص",
+  "expiryDate": {
+    "$date": "2026-05-30T00:00:00.000Z"
+  },
+  "description": "مسکن خفیف",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b03"
+  },
+  "code": 1010,
+  "name": "آموکسی‌سیلین 500",
+  "stock": 440,
+  "price": 48000,
+  "manufacturer": "الحاوی",
+  "form": "کپسول",
+  "expiryDate": {
+    "$date": "2026-12-20T00:00:00.000Z"
+  },
+  "description": "آنتی‌بیوتیک",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b04"
+  },
+  "code": 1020,
+  "name": "ژلوفن",
+  "stock": 360,
+  "price": 60000,
+  "manufacturer": "سیناژن",
+  "form": "کپسول",
+  "expiryDate": {
+    "$date": "2026-07-15T00:00:00.000Z"
+  },
+  "description": "ضد التهاب",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b05"
+  },
+  "code": 1030,
+  "name": "شربت دیفن‌هیدرامین",
+  "stock": 260,
+  "price": 50000,
+  "manufacturer": "دکتر عبیدی",
+  "form": "شربت",
+  "expiryDate": {
+    "$date": "2027-02-01T00:00:00.000Z"
+  },
+  "description": "ضد حساسیت",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b06"
+  },
+  "code": 1040,
+  "name": "سرم قندی نمکی",
+  "stock": 320,
+  "price": 50000,
+  "manufacturer": "رازی",
+  "form": "تزریقی",
+  "expiryDate": {
+    "$date": "2028-01-01T00:00:00.000Z"
+  },
+  "description": "محلول تزریقی",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b07"
+  },
+  "code": 1050,
+  "name": "آسپرین",
+  "stock": 300,
+  "price": 40000,
+  "manufacturer": "داروپخش",
+  "form": "قرص",
+  "expiryDate": {
+    "$date": "2026-10-10T00:00:00.000Z"
+  },
+  "description": "کاهش درد و التهاب",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b08"
+  },
+  "code": 1060,
+  "name": "ایبوپروفن 400",
+  "stock": 340,
+  "price": 38000,
+  "manufacturer": "سیناژن",
+  "form": "قرص",
+  "expiryDate": {
+    "$date": "2027-04-12T00:00:00.000Z"
+  },
+  "description": "مسکن و ضد التهاب",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b09"
+  },
+  "code": 1070,
+  "name": "سیتریزین",
+  "stock": 340,
+  "price": 45000,
+  "manufacturer": "عبیدی",
+  "form": "قرص",
+  "expiryDate": {
+    "$date": "2026-08-15T00:00:00.000Z"
+  },
+  "description": "ضد آلرژی",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b0a"
+  },
+  "code": 1080,
+  "name": "رانیتیدین",
+  "stock": 450,
+  "price": 37000,
+  "manufacturer": "الحاوی",
+  "form": "قرص",
+  "expiryDate": {
+    "$date": "2028-09-01T00:00:00.000Z"
+  },
+  "description": "ضد رفلاکس معده",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b0b"
+  },
+  "code": 1090,
+  "name": "کلداکس",
+  "stock": 330,
+  "price": 55000,
+  "manufacturer": "داروسازی تهران",
+  "form": "کپسول",
+  "expiryDate": {
+    "$date": "2026-12-01T00:00:00.000Z"
+  },
+  "description": "سرماخوردگی",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b0c"
+  },
+  "code": 1100,
+  "name": "فلوکستین",
+  "stock": 370,
+  "price": 60000,
+  "manufacturer": "اکنون دارو",
+  "form": "کپسول",
+  "expiryDate": {
+    "$date": "2027-07-21T00:00:00.000Z"
+  },
+  "description": "داروی اعصاب",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b0d"
+  },
+  "code": 1110,
+  "name": "سوماتریدین",
+  "stock": 350,
+  "price": 85000,
+  "manufacturer": "جندی‌شاپور",
+  "form": "شربت",
+  "expiryDate": {
+    "$date": "2027-05-16T00:00:00.000Z"
+  },
+  "description": "ضد سرفه",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b0e"
+  },
+  "code": 1120,
+  "name": "سرم رینگر",
+  "stock": 295,
+  "price": 42000,
+  "manufacturer": "رازی",
+  "form": "تزریقی",
+  "expiryDate": {
+    "$date": "2028-02-02T00:00:00.000Z"
+  },
+  "description": "محلول تزریق وریدی",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b0f"
+  },
+  "code": 1130,
+  "name": "کلسیم جوشان",
+  "stock": 220,
+  "price": 70000,
+  "manufacturer": "سینا پیشگام دارو نوین",
+  "form": "قرص جوشان",
+  "expiryDate": {
+    "$date": "2026-12-18T00:00:00.000Z"
+  },
+  "description": "تقویت استخوان",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b10"
+  },
+  "code": 1140,
+  "name": "کلسیم جوشان",
+  "stock": 320,
+  "price": 70000,
+  "manufacturer": "سانوفی ایران",
+  "form": "قرص جوشان",
+  "expiryDate": {
+    "$date": "2027-11-11T00:00:00.000Z"
+  },
+  "description": "تقویت استخوان",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b11"
+  },
+  "code": 1150,
+  "name": "ویتامین D3 قطره",
+  "stock": 450,
+  "price": 90000,
+  "manufacturer": "عبیدی",
+  "form": "قطره",
+  "expiryDate": {
+    "$date": "2027-09-09T00:00:00.000Z"
+  },
+  "description": "تقویت سیستم ایمنی",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b12"
+  },
+  "code": 1160,
+  "name": "مولتی‌ویتامین مینرال",
+  "stock": 400,
+  "price": 110000,
+  "manufacturer": "روز دارو",
+  "form": "قرص",
+  "expiryDate": {
+    "$date": "2027-10-05T00:00:00.000Z"
+  },
+  "description": "تقویت عمومی بدن",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b13"
+  },
+  "code": 1170,
+  "name": "سرم جراحی",
+  "stock": 60,
+  "price": 45000,
+  "manufacturer": "هلال احمر",
+  "form": "تزریقی",
+  "expiryDate": {
+    "$date": "2028-06-30T00:00:00.000Z"
+  },
+  "description": "استریل جهت مصرف بیمارستانی",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b14"
+  },
+  "code": 1180,
+  "name": "پنی‌سیلین",
+  "stock": 300,
+  "price": 62000,
+  "manufacturer": "الحاوی",
+  "form": "تزریقی",
+  "expiryDate": {
+    "$date": "2027-01-01T00:00:00.000Z"
+  },
+  "description": "آنتی‌بیوتیک",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b15"
+  },
+  "code": 1190,
+  "name": "کرم زینک اکساید",
+  "stock": 290,
+  "price": 75000,
+  "manufacturer": "سیگل",
+  "form": "موضعی",
+  "expiryDate": {
+    "$date": "2029-01-12T00:00:00.000Z"
+  },
+  "description": "ترمیم‌کننده پوست",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b16"
+  },
+  "code": 1200,
+  "name": "قطره بینی نازوفرین",
+  "stock": 110,
+  "price": 68000,
+  "manufacturer": "قاسم ایران",
+  "form": "قطره",
+  "expiryDate": {
+    "$date": "2026-08-20T00:00:00.000Z"
+  },
+  "description": "بازکننده بینی",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b17"
+  },
+  "code": 1210,
+  "name": "ویتامین ب کمپلکس",
+  "stock": 350,
+  "price": 220000,
+  "manufacturer": "یورو ویتال",
+  "form": "قرص",
+  "expiryDate": {
+    "$date": "2026-09-30T00:00:00.000Z"
+  },
+  "description": "تقویت عمومی بدن",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b18"
+  },
+  "code": 1220,
+  "name": "یونی زینک",
+  "stock": 280,
+  "price": 300000,
+  "manufacturer": "ابیان دارو",
+  "form": "قرص",
+  "expiryDate": {
+    "$date": "2026-12-20T00:00:00.000Z"
+  },
+  "description": "تقویت کننده پوست و مو و ناخن",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b19"
+  },
+  "code": 1230,
+  "name": "دیلتیازم 60",
+  "stock": 200,
+  "price": 35000,
+  "manufacturer": "آریا",
+  "form": "قرص",
+  "expiryDate": {
+    "$date": "2026-10-01T00:00:00.000Z"
+  },
+  "description": "کنترل فشار خون",
+  "isActive": 0
+},
+{
+  "_id": {
+    "$oid": "6a37bacb212d727f0f604b1a"
+  },
+  "code": 1240,
+  "name": "قرص آهن",
+  "stock": 200,
+  "price": 120000,
+  "manufacturer": "عبیدی",
+  "form": "قرص",
+  "expiryDate": {
+    "$date": "2027-12-01T00:00:00.000Z"
+  },
+  "description": "مکمل آهن",
+  "isActive": 0
+}]

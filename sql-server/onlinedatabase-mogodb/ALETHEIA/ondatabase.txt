@@ -1,0 +1,5 @@
+SQL Server version : MS SQL 2022 Express
+SQL Server address : DB_Drugstore.mssql.somee.com
+Login name : adminsql_SQLLogin_1
+Login password : nblsqsrcr9
+Connection string : workstation id=DB_Drugstore.mssql.somee.com;packet size=4096;user id=adminsql_SQLLogin_1;pwd=nblsqsrcr9;data source=DB_Drugstore.mssql.somee.com;persist security info=False;initial catalog=DB_Drugstore;TrustServerCertificate=True

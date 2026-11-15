@@ -1,0 +1,180 @@
+[{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efce"
+  },
+  "DrugID": 1000,
+  "TrackingCode": 21001,
+  "Number": 2,
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efcf"
+  },
+  "DrugID": 1000,
+  "TrackingCode": 98301,
+  "Number": 1,
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efd0"
+  },
+  "DrugID": 1010,
+  "TrackingCode": 11007,
+  "Number": 1,
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efd1"
+  },
+  "DrugID": 1010,
+  "TrackingCode": 21002,
+  "Number": 3,
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efd2"
+  },
+  "DrugID": 1010,
+  "TrackingCode": 34055,
+  "Number": 2,
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efd3"
+  },
+  "DrugID": 1030,
+  "TrackingCode": 51003,
+  "Number": 1,
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efd4"
+  },
+  "DrugID": 1050,
+  "TrackingCode": 21009,
+  "Number": 1,
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efd5"
+  },
+  "DrugID": 1050,
+  "TrackingCode": 52104,
+  "Number": 1,
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efd6"
+  },
+  "DrugID": 1060,
+  "TrackingCode": 11007,
+  "Number": 1,
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efd7"
+  },
+  "DrugID": 1060,
+  "TrackingCode": 29018,
+  "Number": 1,
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efd8"
+  },
+  "DrugID": 1100,
+  "TrackingCode": 83562,
+  "Number": 1,
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efd9"
+  },
+  "DrugID": 1070,
+  "TrackingCode": 29018,
+  "Number": 1,
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efda"
+  },
+  "DrugID": 1070,
+  "TrackingCode": 51003,
+  "Number": 2,
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efdb"
+  },
+  "DrugID": 1140,
+  "TrackingCode": 21009,
+  "Number": 1,
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efdc"
+  },
+  "DrugID": 1050,
+  "TrackingCode": 21001,
+  "Number": 2,
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efdd"
+  },
+  "DrugID": 1150,
+  "TrackingCode": 15133,
+  "Number": 1,
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efde"
+  },
+  "DrugID": 1160,
+  "TrackingCode": 52104,
+  "Number": 1,
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efdf"
+  },
+  "DrugID": 1180,
+  "TrackingCode": 44706,
+  "Number": 1,
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efe0"
+  },
+  "DrugID": 1190,
+  "TrackingCode": 15133,
+  "Number": 2,
+  "IsDeleted": 0
+},
+{
+  "_id": {
+    "$oid": "6a366a391d5b4d968415efe1"
+  },
+  "DrugID": 1190,
+  "TrackingCode": 67010,
+  "Number": 1,
+  "IsDeleted": 0
+}]
