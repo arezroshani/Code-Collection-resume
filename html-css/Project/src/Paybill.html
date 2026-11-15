@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <title>پرداخت شارژ با کارت بانکی</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:;base64,=" />
+    
+  
+</head>
+<body class="payment-page bg-gradient-to-br from-[#bddde0] to-[#e8bee6] flex justify-center items-center p-4 sm:p-6 lg:p-8 min-h-screen m-0 font-vazirmatn box-border">
+
+  <div class="payment-container flex flex-wrap gap-8 p-6 sm:p-8 md:p-10 rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.2)] max-w-[1000px] w-full justify-center backdrop-blur-[20px] border border-white/30" >
+
+    <div class="card-wrapper mt-10 sm:mt-16 md:mt-20 w-full sm:w-auto flex justify-center">
+      <div id="creditCard" class="credit-card w-full sm:w-[380px] h-[230px] relative shadow-[0_20px_40px_rgba(0,0,0,0.3)] rounded-[20px] border-0 overflow-visible mt-10">
+        <div class="front absolute w-full h-full rounded-[20px] p-4 sm:p-6 text-white shadow-[0_15px_35px_rgba(0,0,0,0.2)] bg-gradient-to-br from-[#43cea2] to-[#185a9d] flex flex-col justify-between  overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-full rounded-[20px] pointer-events-none" style="background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.15), transparent 40%)"></div>
+
+          <div class="flex items-center bg-white rounded-t-xl px-3 py-2 sm:px-4 sm:py-2 mb-4 gap-2">
+            <div id="bankNameDisplay" class="flex items-center text-sm sm:text-base font-semibold text-gray-800 truncate ml-auto gap-2">
+              <img id="bankLogo" src="" alt="" class="h-10 hidden" />
+              <span id="bankNameText">بانک شما</span>
+            </div>
+            <img src="./img/GetImage.jpg" alt="شتاب" class="h-10 sm:h-11 object-left" />
+          </div>
+
+          <div id="cardNumberPreview"
+               class="card-number text-lg sm:text-[1.6rem] tracking-widest my-4 text-left w-full flex justify-center whitespace-nowrap"
+               style="direction: ltr;">
+            **** **** **** ****
+          </div>
+
+          <div class="flex justify-between items-center text-sm sm:text-base tracking-wide z-[1]">
+            <div id="cardHolderPreview" class="truncate max-w-[60%]">نام دارنده: ---</div>
+            <div id="expDatePreview" class="whitespace-nowrap">انقضا: --/--</div>
+          </div>
+        </div>
+
+        <div class="back absolute w-full h-full rounded-[20px] p-2 text-black shadow-[0_15px_35px_rgba(0,0,0,0.2)] bg-gradient-to-br from-[#43cea2] to-[#82a4c7] flex flex-col justify-start items-center font-bold tracking-widest text-sm sm:text-[1.2rem]">
+          <div class="magnetic-strip w-[105%] h-[42px] mt-[10px] mb-4 bg-black rounded-none"></div>
+          <div class="cvv-label text-sm mb-1">کد CVV2:</div>
+          <div id="cvvPreview" class="cvv-preview px-4 py-1 rounded-[5px] font-bold tracking-widest bg-white text-black">****</div>
+          <div class="back-text mt-6 px-4 text-[0.9rem] sm:text-[0.95rem] leading-relaxed text-black/80 font-normal text-center select-none">
+            <p>۱. موکدا توصیه می‌شود از افشای رمز خودداری کنید.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form class="payment-form w-full sm:w-auto flex-1 bg-white/25 p-6 sm:p-8 rounded-[20px] shadow-[0_10px_30px_rgba(0,0,0,0.15)] backdrop-blur-[10px] border border-white/20" onsubmit="event.preventDefault()">
+      <h2 class="text-[1.5rem] sm:text-[1.8rem] mb-6 text-[#003366] text-center font-semibold">پرداخت اینترنتی</h2>
+
+      <div class="form-group mb-5">
+        <label for="bankNameInput" class="block mb-1 font-semibold text-[#333]">نام بانک</label>
+        <select id="bankNameInput" class="w-full p-3 text-base rounded-lg bg-white shadow-inner focus:outline-none focus:ring-2 focus:ring-blue-600 border border-gray-300" onchange="updateBankName()" required>
+          <option value="" disabled selected hidden>انتخاب بانک</option>
+          <option value="بانک صادرات">بانک صادرات</option>
+          <option value="بانک ملت">بانک ملت</option>
+          <option value="بانک ملی">بانک ملی</option>
+          <option value="بانک پاسارگاد">بانک پاسارگاد</option>
+          <option value="بانک شهر">بانک شهر</option>
+          <option value="بانک سامان">بانک سامان</option>
+          <option value="بانک تجارت">بانک تجارت</option>
+          <option value="بانک آینده">بانک آینده</option>
+          <option value="بانک سینا">بانک سینا</option>
+          <option value="بانک مسکن">بانک مسکن</option>
+          <option value="بانک انصار">بانک انصار</option>
+          <option value="بانک سپه">بانک سپه</option>
+          <option value="بانک کشاورزی">بانک کشاورزی</option>
+          <option value="بانک پارسیان">بانک پارسیان</option>
+        </select>
+      </div>
+
+      <div class="form-group mb-5 relative">
+        <label for="cardNumber" class="block mb-1 font-semibold text-[#333]">شماره کارت</label>
+        <input type="text" id="cardNumber" maxlength="19" placeholder="**** **** **** ****" required
+          class="w-full p-3 text-base rounded-[10px] bg-white/80 shadow-inner focus:outline-none focus:shadow-[0_0_10px_rgba(14,61,120,0.9)] border-0"
+          style="direction:ltr; text-align:center; font-family: 'Vazir', sans-serif; unicode-bidi: plaintext;" />
+        <p id="cardNumberError" class="text-red-600 text-sm mt-1 hidden"> شماره کارت باید 16 رقم باشد.</p>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-4 mb-5">
+        <div class="form-group flex-1">
+          <label for="cardHolder" class="block mb-1 font-semibold text-[#333]">نام دارنده کارت</label>
+          <input type="text" id="cardHolder" placeholder="نام و نام خانوادگی" required
+            class="w-full p-3 text-base rounded-[10px] bg-white/80 shadow-inner focus:outline-none focus:shadow-[0_0_10px_rgba(14,61,120,0.9)] border-0" />
+          <p id="cardHolderError" class="text-red-600 text-sm mt-1 hidden"></p>
+        </div>
+
+        <div class="form-group w-full md:w-[160px]">
+          <label for="expDate" class="block mb-1 font-semibold text-[#333]">تاریخ انقضا</label>
+          <input type="text" id="expDate" maxlength="5" placeholder="MM/YY" required
+            class="w-full p-3 text-base rounded-[10px] bg-white/80 shadow-inner focus:outline-none focus:shadow-[0_0_10px_rgba(14,61,120,0.9)] border-0" />
+          <p id="expDateError" class="text-red-600 text-sm mt-1 hidden"></p>
+        </div>
+      </div>
+
+      <div class="form-row flex flex-col md:flex-row gap-4 mb-5">
+        <div class="form-group flex-1">
+          <label for="cvv" class="block mb-1 font-semibold text-[#333]">CVV2</label>
+          <input type="text" id="cvv" maxlength="4" placeholder="****" required
+            class="w-full p-3 text-base rounded-[10px] bg-white/80 shadow-inner focus:outline-none focus:shadow-[0_0_10px_rgba(14,61,120,0.9)] border-0" />
+          <p id="cvvError" class="text-red-600 text-sm mt-1 hidden"> </p>
+        </div>
+
+        <div class="form-group flex-1">
+          <label for="password" class="block mb-1 font-semibold text-[#333]">رمز دوم (رمز پویا)</label>
+          <input type="password" id="password" maxlength="6" placeholder="******" required
+            class="w-full p-3 text-base rounded-[10px] bg-white/80 shadow-inner focus:outline-none focus:shadow-[0_0_10px_rgba(14,61,120,0.9)] border-0" />
+          <p id="passwordError" class="text-red-600 text-sm mt-1 hidden"> </p>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <label for="captchaInput" class="block mb-2 font-semibold text-[#003366]">کد امنیتی</label>
+        <div class="flex flex-col sm:flex-row items-center gap-4 max-w-max ml-auto">
+          <input type="text" id="captchaInput" placeholder="کد امنیتی را وارد کنید" maxlength="6" required
+            class="p-3 rounded-[10px] bg-white/80 shadow-inner focus:outline-none focus:shadow-[0_0_10px_rgba(14,61,120,0.9)] border-0 text-center font-vazirmatn w-52 h-14" />
+
+          <div class="flex items-center gap-2">
+            <canvas id="captchaCanvas" width="150" height="50" 
+              class="rounded-lg shadow-md cursor-pointer border border-[#2563eb]" 
+              title="برای تازه‌سازی کلیک کنید"></canvas>
+            <button type="button" id="refreshCaptcha" aria-label="تازه‌سازی کد" 
+              class="text-[#2563eb] hover:text-[#60a5fa] transition-colors duration-300 font-bold p-2 rounded-lg shadow-md border border-[#2563eb] hover:border-[#60a5fa] select-none">
+              ↻
+            </button>
+          </div>
+        </div>
+        <p id="captchaError" class="mt-2 text-red-600 text-sm hidden">کد امنیتی اشتباه است.</p>
+      </div>
+
+      <button type="submit" class="btn-submit w-full text-lg flex items-center justify-center gap-3 transition-transform duration-300 mt-6">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="32" height="32">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+        پرداخت
+      </button>
+    </form>
+  </div>
+
+
+
+</body>
+</html>

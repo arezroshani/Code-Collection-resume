@@ -1,0 +1,262 @@
+﻿@page
+@model ShopRazorpage2.Pages.Products.IndexModel
+@{
+}
+
+<h2 class="mb-3">دسته‌بندی محصولات</h2>
+<div class="categories mb-4">
+    @foreach (var category in Model.Categories)
+    {
+        <a class="category-link @(Model.SelectedCategory == category ? "selected" : "")"
+           asp-page="/Products/Index"
+           asp-route-Category="@category">
+            @category
+        </a>
+    }
+</div>
+
+<hr />
+<h2 class="mb-4">محصولات</h2>
+<div class="products">
+    @if (!Model.Products.Any())
+    {
+        <p>هیچ محصولی برای این دسته‌بندی موجود نیست.</p>
+    }
+    else
+    {
+        foreach (var product in Model.Products)
+        {
+            <div class="product-card shadow-sm">
+                <div class="image-wrapper" style="position: relative;">
+                    <img src="@product.ImageUrl" alt="@product.Name" />
+
+                    @if (product.IsDiscounted && product.DiscountPrice.HasValue)
+                    {
+                        var discountPercent = Math.Round((1 - (product.DiscountPrice.Value / product.Price)) * 100);
+                        <div class="discount-badge" style="position:absolute; top:10px; left:10px; background:#dc3545; color:white; font-size:12px; font-weight:bold; padding:2px 6px; border-radius:4px;">
+                            @discountPercent% تخفیف
+                        </div>
+                    }
+                </div>
+
+                <h3 class="title">@product.Name</h3>
+                <p class="desc">@product.Description</p>
+
+                @if (product.IsDiscounted && product.DiscountPrice.HasValue)
+                {
+                    <p class="price">
+                        <span class="original-price">@product.Price.ToString("N0") تومان</span>
+                        <span class="discount-price">@product.DiscountPrice.Value.ToString("N0") تومان</span>
+                    </p>
+                }
+                else
+                {
+                    <p class="price">@product.Price.ToString("N0") تومان</p>
+                }
+
+                <div class="product-actions mt-auto">
+                    <a class="btn-view" asp-page="/Products/Details" asp-route-slug="@product.Slug">
+                        مشاهده
+                    </a>
+                    <form method="post" asp-page="/Cart/Add" class="add-to-cart-form">
+                        <input type="hidden" name="ProductId" value="@product.Id" />
+                        <input type="hidden" name="Quantity" value="1" />
+                        <button type="submit" class="btn-add-cart" title="افزودن به سبد خرید">
+                            <i class="bi bi-cart-plus"></i>
+                        </button>
+                    </form>
+
+                    <!-- پیام ساده بالا سمت راست -->
+                    <div id="cart-message" class="cart-message">
+                        محصول به سبد خرید اضافه شد  ✅
+                    </div>
+
+                    <style>
+                        .cart-message {
+                            position: fixed;
+                            top: 170px;
+                            right: 90px;
+                            background: #28a745;
+                            color: #fff;
+                            padding: 10px 20px;
+                            border-radius: 6px;
+                            font-size: 14px;
+                            font-weight: 500;
+                            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                            display: none;
+                            z-index: 9999;
+                        }
+                    </style>
+
+                    <script>
+                        document.querySelectorAll(".add-to-cart-form").forEach(form => {
+                            form.addEventListener("submit", async function (e) {
+                                e.preventDefault();
+
+                                const formData = new FormData(this);
+
+                                const response = await fetch(this.action, {
+                                    method: "POST",
+                                    body: formData
+                                });
+
+                                if (response.ok) {
+                                    let msg = document.getElementById("cart-message");
+                                    msg.style.display = "block";
+
+                                    // بعد از ۳ ثانیه مخفی میشه
+                                    setTimeout(() => {
+                                        msg.style.display = "none";
+                                    }, 3000);
+                                } else {
+                                    alert("❌ خطا در افزودن محصول به سبد خرید");
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+        }
+    }
+</div>
+
+<style>
+    /* دسته‌بندی‌ها */
+    .categories {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .category-link {
+        display: inline-block;
+        padding: 8px 14px;
+        background: #f1f1f1;
+        border-radius: 20px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+        .category-link:hover {
+            background: #e2e6ea;
+        }
+
+        .category-link.selected {
+            background: #0d6efd;
+            color: white;
+        }
+
+    /* محصولات */
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: center;
+    }
+
+    .product-card {
+        background: white;
+        border-radius: 12px;
+        padding: 15px;
+        width: 230px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 440px; /* ارتفاع ثابت برای همه کارت‌ها */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+
+        .product-card .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #222;
+        }
+
+        .product-card .desc {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+            height: 40px;
+            overflow: hidden;
+            flex-grow: 1; /* توضیحات فضای باقی‌مانده را پر می‌کنند */
+        }
+
+        .product-card .price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #0d6efd;
+            margin-bottom: 12px;
+        }
+
+    .original-price {
+        text-decoration: line-through;
+        color: #999;
+        margin-bottom: 4px;
+    }
+
+    .discount-price {
+        color: #dc3545;
+        font-weight: bold;
+    }
+
+    /* دکمه‌ها */
+    .product-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto; /* همیشه پایین کارت */
+    }
+
+    .btn-view {
+        display: inline-block;
+        padding: 6px 14px;
+        background: #0d6efd;
+        color: white;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+        .btn-view:hover {
+            background: #084298;
+        }
+
+    .btn-add-cart {
+        background: #0d6efd;
+        border: none;
+        color: #fff;
+        padding: 0.35rem 0.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+        .btn-add-cart i {
+            vertical-align: middle;
+        }
+
+        .btn-add-cart:hover {
+            background: #0b5ed7;
+            transform: scale(1.1);
+        }
+
+    /* افکت Hover کارت */
+    .product-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+</style>

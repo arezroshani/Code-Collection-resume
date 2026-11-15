@@ -1,0 +1,6 @@
+services:
+  personsbasicinfoapi.webhost:
+    image: ${DOCKER_REGISTRY-}personsbasicinfoapiwebhost
+    build:
+      context: .
+      dockerfile: PersonsBasicInfoApi.WebHost/Dockerfile

@@ -1,0 +1,20 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Application/">
+    <Project Path="NationalEntityRegistryApi.Application/NationalEntityRegistryApi.Application.csproj" />
+  </Folder>
+  <Folder Name="/src/Domain/">
+    <Project Path="NationalEntityRegistry.Domain/NationalEntityRegistry.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/Infrastructure/">
+    <Project Path="NationalEntityRegistryApi.Persistence.EF/NationalEntityRegistryApi.Persistence.EF.csproj" />
+    <Project Path="NationalEntityRegistryApi.Read.Dapper/NationalEntityRegistryApi.Read.Dapper.csproj" />
+  </Folder>
+  <Folder Name="/src/Presentation/">
+    <Project Path="NationalEntityRegistryApi.Presentation/NationalEntityRegistryApi.Presentation.csproj" />
+  </Folder>
+  <Folder Name="/test/" />
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
+</Solution>

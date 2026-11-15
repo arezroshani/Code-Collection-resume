@@ -1,0 +1,57 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  // CodeIgniter 3: views live in application/views
+  content: ["./application/views/**/*.php"],
+  safelist: ["before:content-['✎_']"],
+  theme: {
+    extend: {
+      colors: {
+        paper: '#fbf0d9',
+        cream: '#fff4dc',
+        ink: '#2b2118',
+        soft: '#7a6650',
+        terra: '#e2725b',
+        teal: '#1f6f6a',
+        mustard: '#f2b134',
+        pink: '#f4b5b0',
+        navy: '#26355d',
+        wood: '#a8683f',
+      },
+      fontFamily: {
+        title: ['"Young Serif"', 'Georgia', 'serif'],
+        body: ['Nunito', 'system-ui', 'sans-serif'],
+        hand: ['Caveat', 'cursive'],
+      },
+      keyframes: {
+        cross:    { from: { left: '-100px' }, to: { left: 'calc(100% + 40px)' } },
+        bob:      { '0%,100%': { marginTop: '0' }, '50%': { marginTop: '-16px' } },
+        flap:     { from: { transform: 'scaleY(1)' }, to: { transform: 'scaleY(.35)' } },
+        tailsway: { '0%,100%': { transform: 'rotate(0)' }, '50%': { transform: 'rotate(12deg)' } },
+        zz:       { '0%': { opacity: '0', transform: 'translate(0,6px)' }, '40%': { opacity: '1' }, '100%': { opacity: '0', transform: 'translate(6px,-12px)' } },
+        sway:     { '0%,100%': { transform: 'rotate(-3deg)' }, '50%': { transform: 'rotate(3deg)' } },
+        steam:    { '0%': { opacity: '0', transform: 'translateY(8px)' }, '50%': { opacity: '.9' }, '100%': { opacity: '0', transform: 'translateY(-10px)' } },
+        dropin:   { from: { transform: 'translateY(-190px)', opacity: '0' }, to: { transform: 'none', opacity: '1' } },
+        pulse2:   { '0%,100%': { opacity: '.55' }, '50%': { opacity: '1' } },
+        pop:      { from: { transform: 'scale(.7) rotate(-4deg)', opacity: '0' }, to: { transform: 'none', opacity: '1' } },
+        spin50:   { to: { transform: 'rotate(360deg)' } },
+        tw:       { '0%,100%': { transform: 'scale(.7) rotate(0)', opacity: '.6' }, '50%': { transform: 'scale(1.2) rotate(20deg)', opacity: '1' } },
+        float:    { '0%,100%': { translate: '0 0' }, '50%': { translate: '0 -12px' } },
+        swing:    { '0%,100%': { transform: 'rotate(9deg)' }, '50%': { transform: 'rotate(2deg)' } },
+      },
+      animation: {
+        tailsway: 'tailsway 3s ease-in-out infinite',
+        zz:       'zz 3s ease-in-out infinite',
+        sway:     'sway 4s ease-in-out infinite',
+        steam:    'steam 2.6s ease-in-out infinite',
+        dropin:   'dropin 1s .2s cubic-bezier(.2,1.5,.4,1) both',
+        pulse2:   'pulse2 2.4s ease-in-out infinite',
+        pop:      'pop .6s cubic-bezier(.2,1.5,.4,1) both',
+        spin50:   'spin50 50s linear infinite',
+        tw:       'tw 3s ease-in-out infinite',
+        float:    'float 6s ease-in-out infinite',
+        swing:    'swing 3.2s ease-in-out infinite',
+      },
+    },
+  },
+  plugins: [],
+};

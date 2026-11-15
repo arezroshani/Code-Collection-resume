@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ورود به پنل کاربری</title>
+    <link rel="icon" href="./img/user-profile_5675043.png" type="image/png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@30.1.0/dist/font-face.css" />
+   
+  </head>
+
+  <body dir="rtl" class="bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center px-4" style="background-image: url('./img/st-pauls-cathedral-3840x2160-london-england-tourism-travel-night-4432.jpg');">
+    <div class="relative w-full max-w-[450px] bg-transparent rounded-[12px] border-2 border-white/50 shadow-[0_0_12px_rgba(0,0,0,0.2)] backdrop-blur-[8px] flex justify-center items-center flex-col py-6 sm:py-[40px] animate-fade-in">
+      <form class="w-full flex flex-col items-center" id="loginForm">
+        <div class="mt-6 sm:mt-[40px]">
+          <h2 class="text-white text-2xl sm:text-[2em] text-center font-[Vazirmatn] mb-6 sm:mb-[32px]">ورود</h2>
+        </div>
+  
+        <!-- ایمیل -->
+        <div class="relative w-full max-w-[350px] border-b border-white mb-10 sm:mb-[50px] mt-6 sm:mt-[26px]">
+          <input type="email" id="email" required dir="rtl" class="peer w-full h-12 bg-transparent border-none outline-none text-white pr-10 pl-2 text-base" />
+          <label for="email"
+            class="absolute right-12 top-1/2 -translate-y-1/2 text-white text-lg sm:text-xl transition-all duration-300 
+                   peer-focus:top-[-24px] peer-focus:text-lg
+                   peer-[.filled]:top-[-24px] peer-[.filled]:text-lg">
+            ایمیل
+          </label>
+          <span class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-lg">
+            <ion-icon name="mail"></ion-icon>
+          </span>
+          <small id="emailError" class="text-red-300 mt-1 hidden absolute bottom-[-20px] right-0 text-sm">ایمیل نامعتبر است.</small>
+        </div>
+  
+        <!-- رمز عبور -->
+        <div class="relative w-full max-w-[350px] border-b border-white my-6 sm:my-[26px]">
+          <input type="password" id="password" required class="peer w-full h-12 bg-transparent border-none outline-none text-white pr-10 pl-2 text-base" />
+          <label for="password" class="absolute right-12 top-1/2 -translate-y-1/2 text-white text-lg sm:text-xl transition-all duration-300 peer-focus:top-[-24px] peer-focus:text-lg peer-valid:top-[-24px] peer-valid:text-lg">رمز عبور</label>
+          <span class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-lg">
+            <ion-icon name="lock-closed"></ion-icon>
+          </span>
+          <span onclick="togglePassword()" class="absolute left-2 top-1/2 -translate-y-1/2 text-white text-lg cursor-pointer">
+            <ion-icon id="eyeIcon" name="eye-outline"></ion-icon>
+          </span>
+        </div>
+  
+        <small id="passwordError" class="text-red-300 mt-1 hidden text-sm w-full max-w-[350px]">
+          رمز عبور باید حداقل ۸ کاراکتر و شامل حرف بزرگ، کوچک، عدد و کاراکتر خاص باشد.
+        </small>
+  
+        <!-- مرا به خاطر بسپار -->
+        <div class="flex items-center justify-between text-white text-sm w-full max-w-[350px] mt-5 mb-4">
+          <label class="flex items-center gap-1 text-white">
+            <input type="checkbox" id="rememberMe" class="w-4 h-4 accent-white" />
+            مرا به خاطر بسپار
+          </label>
+          
+          <a href="#" class="hover:underline underline-offset-4 transition duration-200">رمز خود را فراموش کرده‌اید؟</a>
+        </div>
+  
+        <button id="submitBtn" type="submit" class="group w-full max-w-[340px] h-[52px] mt-4 mb-2 rounded-[30px] bg-gradient-to-r from-[#f5f1e0] to-[#fff] text-[#4b3d2f] text-lg font-bold tracking-wide flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(245,241,224,0.4)] hover:shadow-[0_8px_30px_rgba(245,241,224,0.6)] hover:bg-gradient-to-r hover:from-[#f0e6cc] hover:to-[#fefefe] hover:text-[#3a2f22] hover:scale-[1.05] transition-all duration-300 ease-in-out border border-[#e7dcc5] focus:outline-none focus:ring-2 focus:ring-[#f3e8c4]">
+          <ion-icon name="log-in-outline" class="text-xl transition-transform duration-300 group-hover:translate-x-1"></ion-icon>
+          ورود
+        </button>
+  
+        <div class="text-white text-sm text-center mt-7 mb-2">
+          <p>
+            حساب کاربری ندارید؟
+            <a href="signup.html" class="font-bold hover:underline">ثبت‌ نام کنید</a>
+          </p>
+        </div>
+      </form>
+    </div>
+   <!-- پیام ذخیره اطلاعات -->
+<div id="save-toast" class="hidden fixed bottom-5 right-5 bg-green-600 text-white px-4 py-3 rounded shadow-lg opacity-0 scale-95 transition-all duration-500 z-50">
+  اطلاعات شما با موفقیت ذخیره شد!
+</div>
+
+<!-- پیام ورود موفقیت‌آمیز -->
+<div id="login-toast" class="hidden fixed bottom-6 left-6 bg-green-500 text-white px-4 py-2 rounded shadow transition duration-300 opacity-0 scale-95 z-50">
+  ورود موفقیت آمیز بود!
+</div>
+
+
+    <!-- آیکون‌ها -->
+<!-- آیکون‌ها -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script>
+  function togglePassword() {
+  const password = document.getElementById("password");
+  const eyeIcon = document.getElementById("eyeIcon");
+  if (!password || !eyeIcon) return;  // اگر وجود نداشتند، خارج شو
+  if (password.type === "password") {
+    password.type = "text";
+    eyeIcon.name = "eye-off-outline";
+  } else {
+    password.type = "password";
+    eyeIcon.name = "eye-outline";
+  }
+}
+// دریافت کاربران ثبت‌نام‌شده
+function getUsers() {
+  return JSON.parse(localStorage.getItem("users")) || [];
+}
+</script>
+
+</body>
+</html>

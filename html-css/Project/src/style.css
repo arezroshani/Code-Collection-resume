@@ -1,0 +1,384 @@
+@tailwind base;
+@tailwind components;
+
+@layer base {
+  html, body {
+    font-family: 'Vazirmatn', sans-serif !important;
+  }
+}
+
+@tailwind utilities;
+
+
+
+
+
+
+
+
+
+/*style index.html*/
+
+.direction-rtl {
+  direction: rtl;
+}
+.no-wrap {
+  white-space: nowrap;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100px;
+  height: 1px;
+  width: 100%;
+  background: #afafb6;
+}
+
+.trust-icons-inline {
+justify-content: flex-start !important;
+gap: 10px; /* فاصله بین آیکون‌ها */
+padding-left: 0 !important;
+}
+.left-align {
+display: flex !important;
+justify-content: flex-start !important;
+direction: ltr !important;
+margin-left: 0 !important;
+padding-left: 0 !important;
+width: max-content;
+}
+.trust-icons-inline {
+margin-top: 20px; 
+}
+main.introduction {
+padding-top: 170px; 
+}
+
+#typed-title {
+display: inline-block;
+white-space: nowrap;
+overflow: hidden;
+width: 0;
+animation: typing 3s steps(15, end) forwards;
+vertical-align: middle;    
+line-height: 1.2;          
+}
+
+@keyframes typing {
+from { width: 0 }
+to { width: 15ch }
+}
+#map {
+  width: 100%;
+  height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*css login.html*/
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out;
+}
+input::-ms-reveal,
+input::-webkit-credentials-auto-fill-button,
+input::-webkit-password-toggle-button {
+display: none !important;
+appearance: none !important;
+}
+
+
+
+
+/*css signup */
+
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in {
+        animation: fade-in 0.8s ease-out;
+      }
+      .input-wrapper label.active {
+        top: -24px;
+        font-size: 0.875rem;
+      }
+      input::-ms-reveal,
+      input::-webkit-credentials-auto-fill-button,
+      input::-webkit-password-toggle-button {
+        display: none !important;
+        appearance: none !important;
+      }
+    
+
+
+/* css vahed.html*/
+* { font-family: 'Vazirmatn', sans-serif; }
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+.sidebar-collapsed .sidebar-input,
+.sidebar-collapsed #profile-text,
+.sidebar-collapsed #modeSwitch,
+.sidebar-collapsed .logout-label {
+  display: none;
+}
+
+.sidebar ul li a:hover i { color: #eb5a25; }
+.sidebar ul li a:hover {
+  background: linear-gradient(to right, #a3e9fb, #e7f29f);
+  color: white !important;
+}
+
+.dark-mode .sidebar ul li a:hover {
+  background: linear-gradient(to right, #60abb4, #1e3a8a);
+  color: #f1f5f9 !important;
+}
+
+.dark-mode .sidebar ul li a:hover i { color: #60a5fa !important; }
+
+.dark-mode {
+  background: linear-gradient(to bottom right, #595289, #111827, #413c6c) !important;
+  background-size: 300% 300%;
+  color: white;
+}
+
+.dark-mode #sidebar {
+  background: linear-gradient(to bottom right, #374151, #31939a, #122e3d) !important;
+}
+
+.dark-mode .text-text,
+.dark-mode .sidebar-label,
+.dark-mode .sidebar ul li a i {
+  color: #f9fafb !important;
+}
+
+.dark-mode .bg-primary-light,
+.dark-mode .bg-toggle { background-color: #374151 !important; }
+
+.dark-mode input { color: white; }
+/* حذف آیکون چشم پیش‌فرض فیلد رمز در کروم (مخصوص موبایل و دسکتاپ) */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-inner-spin-button,
+input[type="password"]::-webkit-clear-button {
+display: none !important;
+appearance: none;
+}
+#sidebar.sidebar-collapsed .sidebar-label,
+#sidebar.sidebar-collapsed #roleDisplay {
+display: none;
+}
+
+#sidebar.sidebar-collapsed a {
+justify-content: center !important;
+}
+/* مخفی‌کردن فیلد سرچ وقتی منو بسته است */
+#sidebar.sidebar-collapsed .sidebar-label {
+display: none;
+}
+
+/* وسط‌چین کردن آیکن جستجو */
+#sidebar.sidebar-collapsed #searchBox {
+justify-content: center !important;
+}
+#sidebar.sidebar-collapsed #modeToggle {
+justify-content: center !important;
+}
+label, input, select {
+color: #1e293b; /* رنگ متن حالت روشن */
+}
+
+body.dark label, 
+body.dark input, 
+body.dark select {
+color: #03070c; /* رنگ متن حالت تیره */
+}
+#home h2 {
+color: #1a1a1a; /* رنگ متن حالت روشن (تیره کم) */
+transition: color 0.3s ease;
+}
+
+/* وقتی کلاس dark روی body هست */
+body.dark #home h2 {
+color: #f0f0f0; /* رنگ متن حالت تاریک (روشن) */
+}
+/* انیمیشن‌ها */
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(10px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* استایل‌های اعتبارسنجی */
+input:invalid, select:invalid, textarea:invalid {
+border-color: #ef4444 !important;
+}
+
+input:invalid + div svg, select:invalid + div svg {
+color: #ef4444 !important;
+}
+
+/* استایل دکمه غیرفعال */
+button:disabled {
+opacity: 0.5 !important;
+cursor: not-allowed !important;
+transform: none !important;
+box-shadow: none !important;
+}
+
+
+
+/* css pay bill */
+
+.card-wrapper { perspective: 1000px; }
+.credit-card {
+transform-style: preserve-3d;
+transition: transform 0.8s ease, box-shadow 0.8s ease;
+position: relative;
+cursor: pointer;
+}
+
+.credit-card:hover {
+transform: rotateY(180deg);
+box-shadow:
+0 0 20px 6px rgba(59, 130, 246, 0.7),
+0 0 40px 10px rgba(96, 165, 250, 0.5),
+inset 0 0 30px 10px rgba(96, 165, 250, 0.8);
+animation: glowing 1.5s infinite ease-in-out;
+}
+
+@keyframes glowing {
+0%, 100% {
+box-shadow:
+  0 0 20px 6px rgba(59, 130, 246, 0.7),
+  0 0 40px 10px rgba(96, 165, 250, 0.5),
+  inset 0 0 30px 10px rgba(96, 165, 250, 0.8);
+}
+50% {
+box-shadow:
+  0 0 30px 10px rgb(142, 75, 144),
+  0 0 60px 15px rgba(151, 216, 162, 0.8),
+  inset 0 0 40px 15px rgb(182, 95, 174);
+}
+}
+
+.credit-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-number {
+  text-shadow: 1px 1px 2px #000, -1px -1px 2px #fff;
+}
+.credit-card .front,
+.credit-card .back {
+  backface-visibility: hidden;
+}
+.credit-card .back {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0; height: 100%;
+}
+.credit-card.flipped .back { z-index: 3; }
+.credit-card.flipped .front { z-index: 1; }
+.btn-submit {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  color: white;
+  background: linear-gradient(270deg, #1e40af, #3b82f6, #60a5fa, #2563eb);
+  background-size: 600% 600%;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.6), inset 0 0 10px rgba(96, 165, 250, 0.8);
+  animation: gradientShift 10s ease infinite;
+  transition: transform 0.3s ease, box-shadow 0.4s ease;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.125rem;
+}
+.btn-submit::before {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.25), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  border-radius: 1rem;
+  transform: rotate(25deg);
+  animation: shineMove 4s linear infinite;
+  z-index: 1;
+}
+.btn-submit:hover::before { opacity: 1; }
+.btn-submit:hover {
+  box-shadow: 0 6px 25px rgba(96, 165, 250, 0.8), inset 0 0 15px rgba(96, 165, 250, 1);
+  transform: scale(1.07);
+}
+.btn-submit:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px #3b82f6 inset;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes shineMove {
+  0% { transform: rotate(25deg) translateX(-100%); }
+  100% { transform: rotate(25deg) translateX(100%); }
+}
+.barcode {
+  width: 80%;
+  height: 50px;
+  margin-bottom: 16px;
+  background: repeating-linear-gradient(to right, #000 0 4px, transparent 4px 8px);
+  border-radius: 6px;
+}

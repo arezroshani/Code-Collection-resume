@@ -1,0 +1,20 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Application/">
+    <Project Path="PersonsBasicInfoApi.Application/PersonsBasicInfoApi.Application.Query.csproj" Id="660c734a-58e7-4bce-891b-7743e1550445" />
+  </Folder>
+  <Folder Name="/src/Domain/">
+    <Project Path="PersonsBasicInfoApi.Domain/PersonsBasicInfoApi.Domain.csproj" Id="65f6b265-fc48-41d5-a241-5894c320c756" />
+  </Folder>
+  <Folder Name="/src/Infrastructure/">
+    <Project Path="PersonsBasicInfoApi.Persistence.EF/PersonsBasicInfoApi.Persistence.EF.csproj" Id="c5c226e2-e079-4738-926b-5bd9aed774fb" />
+    <Project Path="PersonsBasicInfoApi.Read.Dapper/PersonsBasicInfoApi.Read.Dapper.csproj" Id="cf12276b-b1e4-47ad-914a-95c51fefbcbc" />
+  </Folder>
+  <Folder Name="/src/Presentation/">
+    <Project Path="PersonsBasicInfoApi.WebHost/PersonsBasicInfoApi.WebHost.csproj" Id="77f4e031-70b4-40e2-a151-0e59df115852" />
+  </Folder>
+  <Folder Name="/test/" />
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
+</Solution>

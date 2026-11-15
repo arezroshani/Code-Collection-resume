@@ -1,0 +1,189 @@
+﻿@page "{slug}"
+@model ShopRazorpage2.Pages.Products.DetailsModel
+@{
+    ViewData["Title"] = Model.Product?.Name ?? "جزئیات محصول";
+}
+<meta charset="utf-8" />
+
+@if (Model.Product == null)
+{
+    <div class="alert alert-warning text-center py-5 rounded shadow-sm">
+        محصول پیدا نشد 😕
+    </div>
+}
+else
+{
+    <div class="container py-5">
+        <div class="row g-5">
+
+            <!-- ستون عکس محصول -->
+            <div class="col-lg-5">
+                <div class="shadow rounded overflow-hidden">
+                    <img src="@Model.Product.ImageUrl"
+                         class="img-fluid w-100 h-100 object-fit-cover"
+                         alt="@Model.Product.Name" />
+                </div>
+            </div>
+
+            <!-- ستون توضیحات محصول -->
+            <div class="col-lg-7 d-flex flex-column justify-content-between">
+
+                <!-- کارت جزئیات محصول با بک‌گراند شیشه‌ای گرادیانی -->
+                <div class="card gradient-glass mb-4">
+                    <div class="card-body">
+                        <h1 class="fw-bold mb-3">@Model.Product.Name</h1>
+                        <p class="text-muted mb-3 small">دسته‌بندی: @Model.Product.Category</p>
+
+                        <!-- قیمت و تخفیف -->
+                        <div class="mb-4 d-flex align-items-center gap-3 flex-wrap">
+                            @if (Model.Product.IsDiscounted && Model.Product.DiscountPrice.HasValue)
+                            {
+                                var discountPercent = (int)Math.Round((Model.Product.Price - Model.Product.DiscountPrice.Value) / Model.Product.Price * 100);
+                                <span class="text-muted text-decoration-line-through fs-5">
+                                    @Model.Product.Price.ToString("N0") تومان
+                                </span>
+                                <span class="fw-bold text-danger fs-3">
+                                    @Model.Product.DiscountPrice.Value.ToString("N0") تومان
+                                </span>
+                                <span class="badge bg-danger fs-6">٪@discountPercent تخفیف</span>
+                            }
+                            else
+                            {
+                                <span class="fw-bold text-primary fs-3">
+                                    @Model.Product.Price.ToString("N0") تومان
+                                </span>
+                            }
+                        </div>
+
+                        <!-- انتخاب سایز کفش -->
+                        @if (!string.Equals(Model.Product.Category, "کیف", StringComparison.OrdinalIgnoreCase))
+                        {
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-2">انتخاب سایز:</h5>
+                                <div class="d-flex gap-2 flex-wrap">
+                                    @for (int size = 38; size <= 41; size++)
+                                    {
+                                        <button type="button" class="btn btn-outline-success size-btn">@size</button>
+                                    }
+                                </div>
+                            </div>
+                        }
+
+                      
+                        <!-- توضیحات کوتاه -->
+                        <div class="mb-3">
+                            <h5 class="fw-bold mb-2">توضیحات محصول</h5>
+                            <p class="text-secondary">@Model.Product.Description</p>
+                        </div>
+
+                        <!-- دکمه‌ها -->
+                        <div class="d-flex gap-3 mt-3 flex-wrap">
+                            <form method="post" asp-page="/Cart/Add" class="flex-grow-1">
+                                <input type="hidden" name="ProductId" value="@Model.Product.Id" />
+                                <button type="submit" class="btn btn-success btn-lg w-100">
+                                    <i class="bi bi-cart-plus me-2"></i> افزودن به سبد خرید
+                                </button>
+                            </form>
+                            <a asp-page="./Index" class="btn btn-outline-secondary btn-lg flex-grow-1">
+                                بازگشت
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- تب‌بندی توضیحات / نقد و بررسی / سوالات متداول -->
+                <ul class="nav nav-tabs mb-3" id="productTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="desc-tab" data-bs-toggle="tab" data-bs-target="#desc" type="button" role="tab">توضیحات کامل</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab">نقد و بررسی کاربران</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="faq-tab" data-bs-toggle="tab" data-bs-target="#faq" type="button" role="tab">سوالات متداول</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="productTabContent">
+                    <div class="tab-pane fade show active" id="desc" role="tabpanel">
+                        <p class="text-secondary">@Model.Product.Description</p>
+                    </div>
+
+                    <div class="tab-pane fade" id="reviews" role="tabpanel">
+                        @if (Model.Product.Reviews != null && Model.Product.Reviews.Count > 0)
+                        {
+                            @foreach (var review in Model.Product.Reviews)
+                            {
+                                <div class="border-bottom py-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <strong>@review.UserName</strong>
+                                        <span class="text-warning">
+                                            @for (int i = 0; i < review.Stars; i++)
+                                            {
+                                                <i class="bi bi-star-fill"></i>
+                                            }
+                                            @for (int i = review.Stars; i < 5; i++)
+                                            {
+                                                <i class="bi bi-star"></i>
+                                            }
+                                        </span>
+                                    </div>
+                                    <p class="mb-1">@review.Comment</p>
+                                    <small class="text-muted">@review.Date.ToString("yyyy-MM-dd")</small>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <p class="text-muted">هنوز نظری برای این محصول ثبت نشده است.</p>
+                        }
+                    </div>
+
+                    <div class="tab-pane fade" id="faq" role="tabpanel">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><strong>آیا محصول اورجینال است؟</strong> بله، 100٪ اورجینال است.</li>
+                            <li class="mb-2"><strong>مدت زمان ارسال چقدر است؟</strong> معمولاً 1 تا 3 روز کاری.</li>
+                            <li class="mb-2"><strong>امکان بازگشت وجود دارد؟</strong> بله، تا 7 روز بعد از دریافت محصول.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
+<style>
+    /* کارت شیشه‌ای گرادیانی */
+    .gradient-glass {
+        background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(200,200,200,0.1));
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-radius: 1rem;
+        border: 1px solid rgba(255,255,255,0.3);
+        box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+        .gradient-glass:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+    .size-btn.active, .size-btn:hover {
+        background-color: #28a745;
+        color: #fff;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        const sizeButtons = document.querySelectorAll('.size-btn');
+        sizeButtons.forEach(btn=>{
+            btn.addEventListener('click', ()=>{
+                sizeButtons.forEach(b=>b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    });
+</script>

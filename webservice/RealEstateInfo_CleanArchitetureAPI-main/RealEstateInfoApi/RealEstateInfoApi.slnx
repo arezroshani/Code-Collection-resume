@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Application/">
+    <Project Path="RealEstateInfoApi.Application.Query/RealEstateInfoApi.Application.Query.csproj" Id="405926fe-7d07-41b9-8198-42b22e055551" />
+  </Folder>
+  <Folder Name="/src/Domain/">
+    <Project Path="RealEstateInfoApi.Domain/RealEstateInfoApi.Domain.csproj" Id="5997e170-a537-4710-947a-f1f7e2963566" />
+  </Folder>
+  <Folder Name="/src/Infrastructre/">
+    <Project Path="RealEstateInfoApi.Persistence.EF/RealEstateInfoApi.Persistence.EF.csproj" Id="9b249d4f-94a8-4e2c-b448-e7d9dc034a85">
+      <BuildDependency Project="RealEstateInfoApi.Application.Query/RealEstateInfoApi.Application.Query.csproj" />
+    </Project>
+    <Project Path="RealEstateInfoApi.Read.Dapper/RealEstateInfoApi.Read.Dapper.csproj" Id="512093fc-0917-43c4-8e7f-b13a13625dcc" />
+  </Folder>
+  <Folder Name="/src/Presentation/">
+    <Project Path="RealEstateInfoApi.WebHost/RealEstateInfoApi.WebHost.csproj" Id="5a75ac12-25ae-4b5c-8029-65d33b6b4bf3" />
+  </Folder>
+  <Folder Name="/test/" />
+</Solution>

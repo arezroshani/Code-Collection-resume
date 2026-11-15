@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>My Interests — Arez∞ Roshani</title>
+<link rel="stylesheet"
+      href="<?php echo site_url('portfolio/css'); ?>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Mono:wght@300;400;500&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#29232d;--soft:#685c69;--pink:#e98eae;--hot:#d95788;--deep:#a9416d;--lilac:#b89bd2;--lilacd:#79518f;--gold:#f4c46a;--paper:#fff8fb;--line:rgba(80,45,69,.15);
+padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{color:var(--ink);font-family:"DM Mono",monospace;overflow-x:hidden;min-height:100vh;
+background:radial-gradient(circle at 8% 7%,rgba(233,142,174,.36),transparent 26%),radial-gradient(circle at 92% 12%,rgba(184,155,210,.34),transparent 26%),radial-gradient(circle at 48% 48%,rgba(255,210,226,.32),transparent 34%),radial-gradient(circle at 82% 86%,rgba(244,196,106,.2),transparent 30%),#fff4f8}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.16;background-image:radial-gradient(rgba(80,45,69,.25) .7px,transparent .7px);background-size:7px 7px;mask-image:linear-gradient(black,transparent 90%);-webkit-mask-image:linear-gradient(black,transparent 90%)}
+a{color:inherit;text-decoration:none}
+.head{font-family:"Playfair Display",serif}.script{font-family:Caveat,cursive}
+
+#fx{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:2}
+.fl{position:absolute;bottom:-40px;animation:rise linear infinite;opacity:.0}
+@keyframes rise{0%{transform:translateY(0) rotate(0);opacity:0}10%{opacity:.75}90%{opacity:.6}100%{transform:translateY(-115vh) rotate(300deg);opacity:0}}
+.trail{position:fixed;pointer-events:none;z-index:200;font-size:14px;animation:fade .8s ease-out forwards}
+@keyframes fade{to{opacity:0;transform:translateY(-22px) scale(.4) rotate(120deg)}}
+
+nav.top{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(255,248,251,.74);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(169,65,109,.13);box-shadow:0 10px 40px rgba(170,70,110,.07)}
+.nav-in{max-width:1200px;margin:0 auto;padding:18px 26px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:"Playfair Display",serif;font-size:21px;font-weight:600}.logo b{color:var(--hot);font-weight:600}
+.links{display:none;gap:30px;font-size:12px;color:#5a4d5b}
+.links a{position:relative;transition:.3s}.links a:hover,.links a.on{color:var(--hot)}
+.links a::after{content:"";position:absolute;left:50%;bottom:-7px;width:0;height:2px;border-radius:9px;background:var(--hot);transform:translateX(-50%);transition:.3s}
+.links a:hover::after,.links a.on::after{width:70%}
+.tag{font-size:10px;letter-spacing:.25em;color:#a99aa8}
+@media(min-width:760px){.links{display:flex}}
+
+main{position:relative;z-index:3;padding-top:96px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 26px}
+
+.hero{display:grid;gap:56px;align-items:center;padding:64px 0 40px;position:relative}
+@media(min-width:960px){.hero{grid-template-columns:1.2fr .8fr}}
+.kick{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--deep);margin-bottom:26px}
+h1.big{font-family:"Playfair Display",serif;font-weight:600;font-size:clamp(3.4rem,9.5vw,8rem);line-height:.86;letter-spacing:-.06em}
+.shim{background:linear-gradient(100deg,var(--hot),var(--lilacd),var(--gold),var(--hot));background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shim 6s linear infinite}
+@keyframes shim{to{background-position:250% 0}}
+.scr{font-family:Caveat,cursive;font-weight:400;letter-spacing:0;color:#8a5fb0;position:relative;display:inline-block}
+.scr::after{content:"";position:absolute;left:-3%;right:-3%;bottom:-6px;height:12px;border-bottom:4px solid var(--hot);border-radius:50%;transform:rotate(-2deg);opacity:.75}
+.lead{margin-top:38px;max-width:620px;font-size:17px;line-height:1.9;color:#5f5360}
+.lead em{font-family:Caveat,cursive;font-style:normal;font-size:28px;color:var(--hot)}
+.sub{margin-top:16px;max-width:600px;font-size:13px;line-height:1.9;color:#7b6f7c}
+.cta{display:inline-flex;align-items:center;gap:10px;margin-top:34px;padding:14px 26px;border-radius:99px;background:var(--ink);color:#fff;font-size:13px;font-weight:500;box-shadow:0 14px 30px rgba(217,87,136,.28);transition:.3s}
+.cta:hover{transform:translateY(-4px);background:var(--hot)}
+.hint{margin-left:18px;font-family:Caveat,cursive;font-size:22px;color:#a99aa8}
+
+.stage{position:relative;max-width:470px;margin:0 auto;width:100%}
+.note{position:relative;aspect-ratio:1;border:2px solid rgba(41,35,45,.85);border-radius:44px;padding:30px 30px 26px 44px;transform:rotate(2deg);background:linear-gradient(135deg,rgba(255,255,255,.96),rgba(255,237,246,.96));box-shadow:15px 18px 0 rgba(217,87,136,.7),0 26px 60px rgba(190,75,125,.14);transition:.45s}
+.note:hover{transform:rotate(0) translateY(-8px)}
+.note::before{content:"";position:absolute;inset:0 auto 0 34px;border-left:2px solid rgba(217,87,136,.3)}
+.note .ln{position:absolute;left:30px;right:30px;border-top:1px dashed rgba(41,35,45,.16)}
+.note h3{font-family:Caveat,cursive;font-weight:600;font-size:31px;color:#4b404c;position:relative}
+.note ul{list-style:none;margin-top:16px;position:relative}
+.note li{font-family:"Playfair Display",serif;font-size:clamp(1.4rem,3vw,1.95rem);padding:5px 0;transition:.3s}
+.note li:hover{transform:translateX(9px) rotate(-1deg)}
+.note li:nth-child(1){color:var(--ink)}.note li:nth-child(2){color:var(--hot);margin-left:26px}.note li:nth-child(3){color:var(--lilacd)}.note li:nth-child(4){color:var(--pink);margin-left:16px}.note li:nth-child(5){color:#8a5fb0}
+.note .foot{position:absolute;left:44px;right:30px;bottom:22px;display:flex;justify-content:space-between;align-items:flex-end;font-size:10px;letter-spacing:.25em;color:#a99aa8}
+.note .foot span:last-child{font-family:Caveat,cursive;font-size:34px;color:var(--hot);letter-spacing:0}
+.tape{position:absolute;width:96px;height:28px;background:repeating-linear-gradient(45deg,rgba(244,196,106,.72) 0 8px,rgba(255,236,190,.72) 8px 16px);box-shadow:0 3px 8px rgba(80,45,69,.13);z-index:5}
+.t1{top:-12px;left:22px;transform:rotate(-14deg)}.t2{top:-10px;right:20px;transform:rotate(11deg);background:repeating-linear-gradient(45deg,rgba(233,142,174,.7) 0 8px,rgba(255,214,228,.7) 8px 16px)}
+.badge{position:absolute;right:-26px;bottom:-34px;width:132px;height:132px;z-index:6}
+.badge svg{width:100%;height:100%;animation:spin 20s linear infinite}
+.badge .c{position:absolute;inset:0;display:grid;place-items:center;font-size:30px;color:var(--hot);animation:pulse 2.6s ease-in-out infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{50%{transform:scale(1.25)}}
+.stk{position:absolute;font-size:34px;animation:bob 4s ease-in-out infinite;filter:drop-shadow(0 6px 8px rgba(169,65,109,.25));z-index:6}
+@keyframes bob{50%{transform:translateY(-12px) rotate(8deg)}}
+
+.ribbon{margin:60px -30px 0;transform:rotate(-1.4deg);background:linear-gradient(90deg,var(--hot),#c47ab8,var(--lilacd));color:#fff;padding:14px 0;overflow:hidden;box-shadow:0 14px 40px rgba(217,87,136,.25)}
+.rt{display:flex;width:max-content;animation:mq 26s linear infinite;font-size:13px;letter-spacing:.3em;text-transform:uppercase;white-space:nowrap}
+.rt span{padding:0 22px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+.intro{text-align:center;padding:110px 0 30px}
+.lab{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--deep)}
+h2.sec{font-family:"Playfair Display",serif;font-weight:600;font-size:clamp(2.8rem,7vw,6rem);line-height:.92;letter-spacing:-.055em;margin-top:18px}
+.intro p{max-width:600px;margin:26px auto 0;font-size:13px;line-height:2;color:#7b6f7c}
+.orn{font-size:30px;color:var(--hot);display:block;margin-bottom:14px;animation:pulse 3s ease-in-out infinite}
+
+.div{position:relative;height:18px;margin:26px 0;background-image:radial-gradient(circle at 10px 0,transparent 9px,rgba(217,87,136,.35) 9px 10px,transparent 10px);background-size:20px 18px;background-repeat:repeat-x;opacity:.9}
+.div::after{content:"✦ ❀ ✦";position:absolute;left:50%;top:-4px;transform:translateX(-50%);background:#fff4f8;padding:0 14px;color:var(--hot);font-size:15px;letter-spacing:.3em}
+
+.int{display:grid;gap:60px;align-items:center;padding:96px 0;position:relative}
+@media(min-width:960px){.int{grid-template-columns:1fr 1fr}.int.flip .txt{order:2}}
+.txt{position:relative}
+.bn{position:absolute;top:-70px;left:-14px;font-family:"Playfair Display",serif;font-size:11rem;line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(217,87,136,.32);pointer-events:none;user-select:none}
+.num{position:relative;font-size:11px;letter-spacing:.25em;color:rgba(84,63,78,.6);margin-bottom:22px}
+.num i{font-style:normal;display:inline-block;padding:4px 10px;border-radius:99px;background:rgba(217,87,136,.12);color:var(--deep);margin-right:8px}
+.ttl{position:relative;font-family:"Playfair Display",serif;font-weight:600;font-size:clamp(2.7rem,6vw,5.8rem);line-height:.9;letter-spacing:-.055em}
+.qt{position:relative;margin-top:30px;font-family:Caveat,cursive;font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.08;color:var(--deep);padding-left:22px;border-left:3px solid var(--pink)}
+.bd{position:relative;margin-top:24px;max-width:600px;font-size:14.5px;line-height:2;color:var(--soft)}
+.bd::first-letter{font-family:"Playfair Display",serif;font-size:3.1em;float:left;line-height:.85;margin:6px 10px 0 0;color:var(--hot)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chips span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:99px;border:1.5px dashed rgba(121,81,143,.4);color:var(--lilacd);background:rgba(255,255,255,.55)}
+
+.art{position:relative;width:min(100%,470px);aspect-ratio:1;margin:0 auto}
+.frame{position:absolute;inset:6%;border:2px solid rgba(41,35,45,.85);background:linear-gradient(145deg,rgba(255,255,255,.95),rgba(255,240,247,.95));box-shadow:14px 16px 0 rgba(233,142,174,.55),0 28px 60px rgba(135,71,106,.13);transform:rotate(2deg);transition:.5s;overflow:visible}
+.int.flip .frame{transform:rotate(-2deg)}
+.art:hover .frame{transform:rotate(0) scale(1.02)}
+.frame::before{content:"";position:absolute;inset:12px;border:1px dashed rgba(121,81,143,.28);pointer-events:none}
+.frame svg.sc{position:absolute;inset:8% 6% 14%;width:88%;height:78%;overflow:visible}
+.cap{position:absolute;left:8%;right:8%;bottom:4%;text-align:center;font-family:Caveat,cursive;font-size:27px;color:rgba(81,63,79,.78)}
+.corner{position:absolute;font-size:18px;color:var(--hot);opacity:.7}
+.c1{top:14px;left:14px}.c2{top:14px;right:14px}.c3{bottom:14px;left:14px}.c4{bottom:14px;right:14px}
+.hand{position:absolute;top:5%;left:7%;font-family:Caveat,cursive;font-size:26px;color:var(--lilacd);z-index:4;transform:rotate(-5deg)}
+
+.draw{stroke-dasharray:420;stroke-dashoffset:420;animation:dr 5s ease-in-out infinite}.d2{animation-delay:.8s}
+@keyframes dr{0%{stroke-dashoffset:420}55%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:-420}}
+.tw{animation:tw 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes tw{0%,100%{opacity:.3;transform:scale(.6)}50%{opacity:1;transform:scale(1.3)}}
+.shoot{animation:sh 5s ease-in infinite}
+@keyframes sh{0%{transform:translate(230px,10px);opacity:0}10%{opacity:1}45%,100%{transform:translate(20px,110px);opacity:0}}
+.rays{transform-origin:150px 165px;animation:spin 40s linear infinite}
+.ff{animation:ffl 4s ease-in-out infinite}
+@keyframes ffl{0%,100%{transform:translate(0,0);opacity:.3}50%{transform:translate(10px,-16px);opacity:1}}
+.dr1{animation:dft 6s ease-in-out infinite}
+@keyframes dft{50%{transform:translateX(16px)}}
+.bub{animation:bu 6s ease-in infinite}
+@keyframes bu{0%{transform:translateY(0);opacity:0}20%{opacity:.9}100%{transform:translateY(-70px);opacity:0}}
+
+.end{text-align:center;padding:120px 0 90px;position:relative}
+.moonbig{width:150px;height:150px;border-radius:50%;margin:0 auto 34px;background:radial-gradient(circle at 35% 35%,#fffdf6,#fbe3ef 65%,#e9bfd6);box-shadow:0 0 50px rgba(233,142,174,.6),0 0 120px rgba(184,155,210,.5);animation:pulse 5s ease-in-out infinite}
+.end h2{font-family:"Playfair Display",serif;font-weight:600;font-size:clamp(3rem,7.5vw,6.4rem);line-height:.9;letter-spacing:-.06em}
+.end p{max-width:560px;margin:28px auto 0;font-size:13.5px;line-height:2;color:#7b6f7c}
+.end p em{font-family:Caveat,cursive;font-style:normal;font-size:27px;color:var(--hot)}
+.cta.pink{background:var(--hot)}.cta.pink:hover{background:var(--deep)}
+footer{position:relative;z-index:3;border-top:1px solid rgba(217,87,136,.22);padding:26px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto}
+footer p{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#a99aa8}footer .script{font-size:22px;color:var(--hot)}
+
+.reveal{opacity:0;transform:translateY(38px);transition:opacity .9s ease,transform .9s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:960px){.bn{font-size:8rem;top:-50px}.badge{right:-8px;width:104px;height:104px}.ribbon{margin-inline:-26px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="gPink" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbd2e2"/><stop offset="1" stop-color="#e98eae"/></linearGradient>
+<radialGradient id="gNight" cx=".5" cy=".45" r=".6"><stop offset="0" stop-color="#f6effc"/><stop offset="1" stop-color="#d7c3ec"/></radialGradient>
+<radialGradient id="gPlanet" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff0c9"/><stop offset="1" stop-color="#e98eae"/></radialGradient>
+<radialGradient id="gMoon" cx=".35" cy=".35" r=".8"><stop offset="0" stop-color="#fffdfb"/><stop offset=".7" stop-color="#f9dce9"/><stop offset="1" stop-color="#e7bfd4"/></radialGradient>
+<linearGradient id="gTail" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#d95788"/></linearGradient>
+<radialGradient id="gGlow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffe3a8" stop-opacity=".85"/><stop offset="1" stop-color="#ffe3a8" stop-opacity="0"/></radialGradient>
+<linearGradient id="gDoor" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b85f82"/><stop offset="1" stop-color="#e49ab6"/></linearGradient>
+<linearGradient id="gDusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#74638d"/><stop offset="1" stop-color="#e5b5cc"/></linearGradient>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#d95788"/></marker>
+<clipPath id="clipW"><rect x="90" y="54" width="124" height="160"/></clipPath>
+</defs></svg>
+
+<div id="fx" aria-hidden="true"></div>
+
+<nav class="top"><div class="nav-in">
+<a href="index.html" class="logo">Arez<b>∞</b></a>
+<div class="links"><a href="<?php echo site_url('portfolio'); ?>">Home</a><a  href="<?php echo site_url('portfolio/about'); ?>">About</a><a href="<?php echo site_url('portfolio/interests'); ?>" class="on">Interests</a><a href="<?php echo site_url('portfolio/contact'); ?>">Contact</a></div>
+<div class="tag"> 2026</div></div></nav>
+
+<main><div class="wrap">
+
+<section class="hero">
+  <div class="reveal">
+    <div class="kick">/ things that make me curious ✦</div>
+    <h1 class="big">My <span class="shim">interests</span><br>are a little<br><span class="scr">chaotic.</span></h1>
+    <p class="lead">I don't actually have a particular or special list of interests. The things on this page are imagined ones , little thought experiments about the kinds of things I might find myself fascinated by. <em>“what if?”</em></p>
+    <p class="sub">Six things I find myself drawn to , each offering a different reason to pause, look closer, and see what lies beneath the surface.</p>
+    <a href="#list" class="cta">Explore my little worlds <span>↓</span></a><span class="hint">scroll slowly...</span>
+  </div>
+  <div class="stage reveal">
+    <span class="stk" style="top:-30px;left:-24px">🦋</span>
+    <span class="stk" style="top:44%;right:-34px;animation-delay:1s;font-size:28px">🌸</span>
+    <span class="stk" style="bottom:-26px;left:12%;animation-delay:2s;font-size:30px">🌙</span>
+    <div class="note">
+      <i class="tape t1"></i><i class="tape t2"></i>
+      <i class="ln" style="top:96px"></i><i class="ln" style="top:176px"></i><i class="ln" style="top:256px"></i><i class="ln" style="top:336px"></i>
+      <h3>things I keep coming back to... ✎</h3>
+      <ul><li>✦ code</li><li>♡ design</li><li>⚙ robotics</li><li>✧ experiments</li><li>☼ art &amp; ideas</li></ul>
+      <div class="foot"><span>AREZ / 2026</span><span>♡</span></div>
+    </div>
+    <div class="badge">
+      <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+      <circle cx="60" cy="60" r="58" fill="#fff" stroke="#29232d" stroke-width="1.5"/>
+      <text font-family="DM Mono" font-size="10.5" letter-spacing="3" fill="#a9416d"><textPath href="#circ">imaginary • interests • only • real • curiosity •</textPath></text></svg>
+      <div class="c">✦</div>
+    </div>
+  </div>
+</section>
+
+<div class="ribbon"><div class="rt" id="rt"></div></div>
+
+<section class="intro reveal" id="list">
+  <span class="orn">✦</span><p class="lab">six little worlds</p>
+  <h2 class="sec">Not hobbies.<br><span style="color:var(--hot)">Not routines..</span></h2>
+  <p>None of these are meant to describe a real routine. They are simply ideas I would enjoy exploring , each one for a slightly different reason.</p>
+</section>
+
+<div class="div"></div>
+<div id="items"></div>
+
+<section class="end reveal">
+  <div class="moonbig"></div>
+  <p class="lab" style="margin-bottom:22px">end of the notebook</p>
+  <h2>Maybe curiosity<br><span class="shim">is enough.</span></h2>
+  <p>Six interests. No checklist. No particular reason to collect them. <em>Just little things worth noticing.</em></p>
+  <a href="<?php echo site_url('portfolio/contact'); ?>" class="cta pink">Say hello <span>→</span></a>
+</section>
+
+</div></main>
+
+<footer><p>© 2026 Arez∞ Roshani</p><span class="script">made by arezoo</span></footer>
+
+<script>
+
+const rays=()=>Array.from({length:16},(_,i)=>{const a=i*22.5;return `<line x1="150" y1="165" x2="150" y2="28" stroke="#f4c46a" stroke-opacity="${i%2?.3:.55}" stroke-width="${i%2?2:4}" stroke-linecap="round" transform="rotate(${a} 150 165)" stroke-dasharray="0 70 60"/>`}).join('');
+const checker=()=>{let s='';for(let r=0;r<8;r++)for(let c=0;c<8;c++)s+=`<rect x="${c*22}" y="${r*22}" width="22" height="22" fill="${(r+c)%2?'#9b7192':'#f8d8e4'}"/>`;return s};
+const st=(x,y,ch,d=0,c='#f4c46a',s=18)=>`<text x="${x}" y="${y}" class="tw" style="animation-delay:${d}s" fill="${c}" font-size="${s}">${ch}</text>`;
+
+const scenes={
+calli:`<svg class="sc" viewBox="0 0 300 300">
+<circle cx="80" cy="95" r="62" fill="#e98eae" opacity=".16"/><circle cx="230" cy="215" r="72" fill="#b89bd2" opacity=".2"/>
+<text x="34" y="132" font-family="Caveat" font-size="100" fill="#79518f" opacity=".5">Aa</text>
+<text x="176" y="98" font-family="Caveat" font-size="60" fill="#d95788" opacity=".55">Bb</text>
+<path class="draw" d="M34 236 C80 172 118 272 160 218 S238 180 268 230" fill="none" stroke="#d95788" stroke-width="4.5" stroke-linecap="round"/>
+<path class="draw d2" d="M52 258 C96 226 140 272 196 244" fill="none" stroke="#79518f" stroke-width="2.2" stroke-linecap="round"/>
+<g transform="rotate(28 200 110)"><path d="M200 30C236 40 244 96 214 140C204 154 196 160 190 176C186 160 182 140 184 120C186 92 184 60 200 30Z" fill="url(#gPink)" stroke="#29232d" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M199 44C192 84 190 130 190 176" fill="none" stroke="#29232d" stroke-width="2"/><path d="M196 78l20-8M194 100l24-10M193 122l22-10" stroke="#fff" stroke-opacity=".7" stroke-width="1.6"/></g>
+<path d="M158 176q-6 10 0 15q6-5 0-15z" fill="#29232d"/>
+${st(238,58,'✦',0)}${st(30,60,'✧',.7,'#d95788',22)}${st(262,150,'✦',1.2,'#b89bd2',16)}${st(96,282,'✧',.4,'#f4c46a',20)}</svg>`,
+
+astro:`<svg class="sc" viewBox="0 0 300 300"><circle cx="150" cy="150" r="138" fill="url(#gNight)"/>
+${st(40,60,'✦',0,'#79518f',14)}${st(240,50,'✧',.5,'#d95788',18)}${st(258,180,'✦',1,'#79518f',12)}${st(30,220,'✧',1.4,'#d95788',16)}${st(110,270,'✦',.8,'#f4c46a',14)}${st(200,275,'✧',.3,'#79518f',14)}
+<ellipse cx="150" cy="158" rx="118" ry="40" transform="rotate(-20 150 158)" fill="none" stroke="#79518f" stroke-opacity=".4" stroke-dasharray="4 5"/>
+<ellipse cx="150" cy="158" rx="68" ry="17" transform="rotate(-20 150 158)" fill="none" stroke="#f4c46a" stroke-width="6" opacity=".9"/>
+<circle cx="150" cy="158" r="37" fill="url(#gPlanet)"/>
+<path d="M82 158A68 17 0 0 0 218 158" transform="rotate(-20 150 158)" fill="none" stroke="#f4c46a" stroke-width="6"/>
+<path d="M78 40A34 34 0 1 0 78 108A27 27 0 1 1 78 40Z" fill="url(#gMoon)"/>
+<circle cx="234" cy="238" r="14" fill="#b89bd2"/><circle cx="234" cy="238" r="22" fill="none" stroke="#b89bd2" stroke-opacity=".4"/>
+<g class="shoot"><line x1="0" y1="0" x2="-52" y2="-25" stroke="url(#gTail)" stroke-width="3" stroke-linecap="round"/><circle r="4" fill="#fff"/></g></svg>`,
+
+chess:`<svg class="sc" viewBox="0 0 300 300">
+<g transform="rotate(-7 150 150) translate(62 66)"><rect x="-6" y="-6" width="188" height="188" fill="#403540"/>${checker()}</g>
+<path d="M44 250Q76 96 232 74" fill="none" stroke="#d95788" stroke-width="3.4" stroke-dasharray="7 7" marker-end="url(#arrow)"/>
+<circle cx="44" cy="250" r="9" fill="#d95788" opacity=".3"/><circle cx="240" cy="72" r="11" fill="none" stroke="#d95788" stroke-width="3"/>
+<text x="155" y="196" text-anchor="middle" font-size="124" font-family="Georgia,serif" fill="#fff" opacity=".6" transform="translate(6 7)">♞</text>
+<text x="155" y="196" text-anchor="middle" font-size="124" font-family="Georgia,serif" fill="#342b36">♞</text>
+${st(20,60,'♔',0,'#b89bd2',26)}${st(262,250,'✦',.6)}${st(255,130,'✧',1.1,'#d95788',18)}</svg>`,
+
+home:`<svg class="sc" viewBox="0 0 300 300"><circle cx="150" cy="165" r="132" fill="url(#gGlow)"/>
+<g class="rays">${rays()}</g>
+<path d="M98 254V132A52 52 0 0 1 202 132V254Z" fill="url(#gDoor)" stroke="#4b3744" stroke-width="4"/>
+<path d="M114 250V136A36 36 0 0 1 186 136V250" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="2"/>
+<circle cx="184" cy="198" r="13" fill="#fff1c9" opacity=".4"/><circle cx="184" cy="198" r="6" fill="#fff1c9"/>
+<rect x="108" y="257" width="84" height="12" rx="5" fill="#d95788" opacity=".55"/>
+<g stroke="#79518f" stroke-width="2" fill="none"><path d="M64 254V214M78 254V200M222 254V208M238 254V196"/></g>
+<circle cx="64" cy="210" r="8" fill="#e98eae"/><circle cx="78" cy="196" r="9" fill="#f4c46a"/><circle cx="222" cy="204" r="9" fill="#e98eae"/><circle cx="238" cy="192" r="8" fill="#b89bd2"/>
+<circle class="ff" cx="52" cy="150" r="3.5" fill="#f4c46a"/><circle class="ff" cx="252" cy="130" r="3.5" fill="#f4c46a" style="animation-delay:1s"/><circle class="ff" cx="40" cy="96" r="3" fill="#f4c46a" style="animation-delay:2s"/><circle class="ff" cx="268" cy="200" r="3" fill="#f4c46a" style="animation-delay:.6s"/>
+${st(24,40,'✦',0,'#d95788',20)}${st(260,44,'✧',.9,'#f4c46a',22)}</svg>`,
+
+dream:`<svg class="sc" viewBox="0 0 300 300">
+<rect x="76" y="62" width="124" height="160" fill="none" stroke="#d95788" stroke-opacity=".5" stroke-dasharray="6 5" transform="rotate(-5 138 142)"/>
+<rect x="90" y="54" width="124" height="160" fill="url(#gDusk)" stroke="#4b3c4f" stroke-width="5"/>
+<g clip-path="url(#clipW)"><circle cx="188" cy="88" r="26" fill="#fff1c9" opacity=".35"/><circle cx="188" cy="88" r="16" fill="#fff1c9"/>
+${st(104,84,'✦',0,'#fff',10)}${st(126,120,'✧',.8,'#fff',9)}${st(170,140,'✦',1.4,'#fff',9)}
+<g class="dr1"><ellipse cx="128" cy="166" rx="26" ry="8" fill="#fff" opacity=".7"/><ellipse cx="146" cy="160" rx="16" ry="9" fill="#fff" opacity=".7"/></g>
+<g class="dr1" style="animation-delay:2s"><ellipse cx="184" cy="196" rx="22" ry="7" fill="#fff" opacity=".6"/><ellipse cx="196" cy="191" rx="12" ry="7" fill="#fff" opacity=".6"/></g></g>
+<path d="M152 54V214M90 134H214" stroke="#4b3c4f" stroke-width="5"/><rect x="80" y="214" width="144" height="11" fill="#4b3c4f"/>
+<circle class="bub" cx="60" cy="230" r="8" fill="#fff" fill-opacity=".4" stroke="#b89bd2" stroke-width="2"/><circle class="bub" cx="250" cy="250" r="12" fill="#fff" fill-opacity=".4" stroke="#b89bd2" stroke-width="2" style="animation-delay:2s"/><circle class="bub" cx="240" cy="200" r="6" fill="#fff" fill-opacity=".4" stroke="#d95788" stroke-width="2" style="animation-delay:3.4s"/>
+<path d="M60 268c30-16 60 14 90-2s60-12 90 4" fill="none" stroke="#b89bd2" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="3 7"/>
+${st(24,60,'✦',0,'#d95788',20)}${st(252,80,'✧',.7,'#79518f',22)}</svg>`,
+
+hira:`<svg class="sc" viewBox="0 0 300 300">
+<path d="M0 240Q70 190 130 228T300 214V300H0Z" fill="#b89bd2" opacity=".25"/><path d="M0 262Q90 226 170 258T300 246V300H0Z" fill="#e98eae" opacity=".22"/>
+<g opacity=".6"><rect x="228" y="190" width="30" height="24" fill="#79518f"/><path d="M223 192L243 172L263 192Z" fill="#79518f"/><rect x="240" y="198" width="8" height="10" fill="#f4c46a"/></g>
+<circle cx="250" cy="70" r="22" fill="url(#gMoon)"/>
+<g transform="rotate(-8 100 110)"><rect x="28" y="60" width="146" height="100" fill="#fffdf7" stroke="#4c3d49" stroke-width="3"/>
+<rect x="38" y="70" width="30" height="30" fill="none" stroke="#79518f" stroke-width="2" stroke-dasharray="4 3"/><text x="53" y="92" text-anchor="middle" font-size="18" fill="#79518f">♡</text>
+<rect x="118" y="70" width="46" height="18" fill="none" stroke="#d95788" stroke-width="1.6"/><text x="141" y="83" text-anchor="middle" font-size="8" letter-spacing="1.4" fill="#d95788" font-family="DM Mono">AIR MAIL</text>
+<path d="M40 122H160M40 138H150" stroke="#29232d" stroke-opacity=".2"/></g>
+<path id="route" d="M120 178C160 232 212 196 240 200" fill="none" stroke="#d95788" stroke-width="2.4" stroke-dasharray="6 6"/>
+<g><path d="M0 0L-15 -6L-10 0L-15 6Z" fill="#a9416d"/><animateMotion dur="7s" repeatCount="indefinite" rotate="auto"><mpath href="#route"/></animateMotion></g>
+${st(30,36,'✦',0,'#d95788',20)}${st(196,40,'✧',.8,'#79518f',16)}${st(268,140,'✦',1.4,'#f4c46a',16)}</svg>`
+};
+
+const data=[
+{n:'01',lab:'CALLIGRAPHY',t:'Calligraphy',q:'“A slow hand refuses to lie.”',b:'Digital text is written carelessly and erased without cost. Ink can\'t be. Every deliberate stroke is a small, physical commitment , Every deliberate stroke is a small, physical commitment , a reminder that some things gain meaning precisely because they cannot be undone.',cap:'letters with weight',hand:'ink & patience',s:'calli',ch:['permanence','attention','presence'],st:'🦋'},
+{n:'02',lab:'ASTRONOMY',t:'Astronomy',q:'“Nothing humbles us quite like the vastness of the universe.”',b:'Marcus Aurelius imagined looking down at his own life from far above, so that his problems could return to their proper size. I do the same in a different way: I look up at the sky, a sky so ancient and vast that even the most pressing deadlines can seem small and almost laughable, if only for a moment.',cap:'small under a very large sky',hand:'look up',s:'astro',ch:['stars','perspective','wonder'],st:'🌙'},
+{n:'03',lab:'CHESS',t:'Chess',q:'“Inaction is Still a Choice.”',b:'Chess — I love chess because sometimes, not making a move is a move in itself. Choosing to stay still is still a choice, and the consequences of that choice can be just as real as those of any action. Every moment of hesitation, every piece left untouched, quietly shapes what comes next. In chess, you don\'t get to escape responsibility by doing nothing—you still have to live with what your inaction creates.',cap:'one move, many consequences',hand:'think twice.',s:'chess',ch:['strategy','restraint','patience'],st:'♛'},
+{n:'04',lab:'THE FEELING OF COMING HOME',t:'Coming<br>Home',q:'“That tiny moment before opening the door, when you already know you\'ve arrived.”',b:'Not the house itself. Not the address. Just that almost invisible second when the familiar becomes physical — the light behind the door, the sound on the other side, and the strange certainty that you are exactly where you meant to be.',cap:'The Feeling of Coming Home',hand:'almost there...',s:'home',ch:['warm light','belonging','threshold'],st:'🌷'},
+{n:'05',lab:'DÉJÀ RÊVÉ',t:'Déjà<br>Rêvé',q:'“When reality feels like something you dreamed before.”',b:'Not quite déjà vu. It is the stranger feeling of recognizing a moment not as something you\'ve lived, but as something you\'ve dreamed. A room, a conversation, afternoon light — suddenly familiar, without knowing when you saw it.',cap:'a memory with no date',hand:'have I seen this...',s:'dream',ch:['dreams','memory','afternoon light'],st:'☁️'},
+{n:'06',lab:'HIRAETH',t:'Hiraeth',q:'“A longing for a place, time, or home that may no longer exist.”',b:'Missing a place that may no longer be the same — or perhaps never truly existed in the first place. A longing for something you cannot simply return to, because what you miss might be a place, a time, or a version of yourself that only exists in memory.',cap:'Hiraeth',hand:'somewhere...',s:'hira',ch:['longing','distance','old letters'],st:'💌'}
+];
+
+document.getElementById('items').innerHTML=data.map((d,i)=>`
+<section class="int ${i%2?'flip':''}">
+ <div class="txt reveal"><div class="bn">${d.n}</div>
+  <div class="num"><i>${d.n}</i>/ ${d.lab}</div>
+  <h2 class="ttl">${d.t}</h2>
+  <p class="qt">${d.q}</p>
+  <p class="bd">${d.b}</p>
+  <div class="chips">${d.ch.map(c=>`<span>${c}</span>`).join('')}</div></div>
+ <div class="art reveal"><div class="frame">
+  <i class="tape t1" style="left:14%"></i><i class="tape t2" style="right:12%"></i>
+  <span class="corner c1">✦</span><span class="corner c2">✧</span><span class="corner c3">✧</span><span class="corner c4">✦</span>
+  <div class="hand">${d.hand}</div>${scenes[d.s]}<div class="cap">${d.cap}</div></div>
+  <span class="stk" style="top:-6px;${i%2?'left':'right'}:-10px;font-size:36px;animation-delay:${i*.4}s">${d.st}</span></div>
+</section>${i<5?'<div class="div"></div>':''}`).join('');
+
+
+const words=['curious','dreamy','hiraeth','déjà rêvé','slow ink','small under big skies','coming home','one quiet move'];
+document.getElementById('rt').innerHTML=(words.map(w=>`<span>✦ ${w}</span>`).join('')).repeat(4);
+
+
+const fx=document.getElementById('fx'),sym=['✦','✧','❀','☾','♡','✿','⋆','❁'],col=['#e98eae','#b89bd2','#f4c46a','#d95788'];
+for(let i=0;i<26;i++){const e=document.createElement('span');e.className='fl';e.textContent=sym[i%sym.length];
+e.style.cssText=`left:${Math.random()*100}%;font-size:${10+Math.random()*16}px;color:${col[i%4]};animation-duration:${14+Math.random()*16}s;animation-delay:${-Math.random()*20}s`;fx.appendChild(e)}
+
+
+let last=0;addEventListener('pointermove',e=>{const n=performance.now();if(n-last<55)return;last=n;
+const s=document.createElement('span');s.className='trail';s.textContent=sym[(Math.random()*sym.length)|0];s.style.left=e.clientX+'px';s.style.top=e.clientY+'px';s.style.color=col[(Math.random()*4)|0];
+document.body.appendChild(s);setTimeout(()=>s.remove(),800)});
+
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('show');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

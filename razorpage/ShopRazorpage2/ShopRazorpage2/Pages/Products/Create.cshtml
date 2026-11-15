@@ -1,0 +1,77 @@
+﻿@page
+@model ShopRazorpage2.Pages.Products.CreateModel
+@{
+    ViewData["Title"] = "افزودن محصول";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-0 rounded-3">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <h4 class="mb-0">➕ افزودن محصول جدید</h4>
+                    <span class="badge bg-light text-dark">محصول جدید</span>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="Input.Name" class="form-label">نام محصول</label>
+                            <input asp-for="Input.Name" class="form-control" placeholder="مثال: گوشی آیفون 14" />
+                            <span asp-validation-for="Input.Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Input.Price" class="form-label">قیمت (تومان)</label>
+                                <input asp-for="Input.Price" class="form-control" type="number" min="0" />
+                                <span asp-validation-for="Input.Price" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Input.Category" class="form-label">دسته‌بندی</label>
+                                <select asp-for="Input.Category" class="form-select">
+                                    <option value="">-- انتخاب کنید --</option>
+                                    @foreach (var c in Model.Categories)
+                                    {
+                                        <option value="@c">@c</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="Input.Category" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Input.Description" class="form-label">توضیحات</label>
+                            <textarea asp-for="Input.Description" class="form-control" rows="4" placeholder="توضیحات محصول..."></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Input.ImageUrl" class="form-label">آدرس تصویر (اختیاری)</label>
+                            <input asp-for="Input.ImageUrl" class="form-control" placeholder="/images/photo.jpg" />
+                        </div>
+
+                        <div class="d-flex justify-content-end">
+                            <a asp-page="./Index" class="btn btn-secondary me-2">
+                                ❌ لغو
+                            </a>
+                            <button type="submit" class="btn btn-success">
+                                💾 ذخیره و نمایش
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- دکمه شناور سمت راست -->
+<!-- دکمه شناور سمت راست با متن "افزودن محصول" -->
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,70 @@
+﻿@page
+@model ShopRazorpage2.Pages.Account.RegisterModel
+@{
+    ViewData["Title"] = "ثبت‌نام";
+}
+<meta charset="utf-8" />
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="glass-card p-5 w-100" style="max-width:400px;">
+        <h2 class="mb-4 text-center fw-bold">ثبت‌نام</h2>
+
+        @if (Model.ErrorMessage != null)
+        {
+            <div class="alert alert-danger text-center">
+                @Model.ErrorMessage
+            </div>
+        }
+
+        <form method="post">
+            <div class="mb-3">
+                <label class="form-label">نام کاربری</label>
+                <input type="text" name="Username" class="form-control" value="@Model.Username" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">ایمیل</label>
+                <input type="email" name="Email" class="form-control" value="@Model.Email" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">رمز عبور</label>
+                <input type="password" name="Password" class="form-control" required />
+            </div>
+            <button type="submit" class="btn btn-gradient w-100 mt-3">ثبت‌نام</button>
+        </form>
+
+        <p class="text-center mt-3">
+            قبلا حساب داری؟ <a asp-page="./Login">ورود</a>
+        </p>
+    </div>
+</div>
+
+<style>
+    .glass-card {
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 1rem;
+        border: 1px solid rgba(255,255,255,0.2);
+        box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+    .btn-gradient {
+        background: linear-gradient(135deg,#28a745,#218838);
+        border: none;
+        color: #fff;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+        .btn-gradient:hover {
+            background: linear-gradient(135deg,#218838,#1e7e34);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+</style>

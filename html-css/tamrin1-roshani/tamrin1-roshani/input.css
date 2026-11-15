@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+   ::selection {
+    background: #ddd6fe;
+    color: #312e81;
+}
+
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+
+@keyframes float-card {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+
+@keyframes soft-pulse {
+
+    0%,
+    100% {
+        opacity: 0.35;
+    }
+
+    50% {
+        opacity: 0.75;
+    }
+
+}
+
+
+
+
+.hero-float {
+    animation: float-card 5s ease-in-out infinite;
+}
+
+
+.hero-float-slow {
+    animation: float-card 7s ease-in-out infinite;
+}
+
+
+
+
+a {
+    outline: none;
+}
+
+
+
+* {
+    scroll-behavior: smooth;
+}

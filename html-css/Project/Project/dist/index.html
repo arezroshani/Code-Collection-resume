@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+
+
+<link href="https://cdn.fontcdn.ir/Font/Persian/Vazirmatn/Vazirmatn.css" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Vazirmatn', sans-serif;
+  }
+</style>
+
+  <meta charset="UTF-8" />
+  <title>برج روما رزیدنس کامرانیه</title>
+  <meta name="description" content="ورود کاربران به سامانه مدیریت ساختمان - مشاهده امکانات، واحدها، و اطلاعات تماس" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./img/icons8-building-49.png" type="image/png" />
+
+  
+  
+
+  <!-- Unicons CSS -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  
+  
+<script defer src="bundle.js"></script><link href="bundle.css" rel="stylesheet"></head>
+<body>
+
+  <div class="background"></div>
+  <div class="dark-layer"></div>
+
+  <nav class="nav">
+    <a href="login.html" class="logo nav-auth">
+      <i class="uil uil-user-check"></i> ورود/ثبت‌ نام
+    </a>
+  
+    <ul class="nav-links">
+      <li><a href="#"><i class="uil uil-estate"></i> خانه</a></li>
+      <li><a href="#"><i class="uil uil-building"></i> درباره ساختمان</a></li>
+      <li><a href="vahed.html"><i class="uil uil-apps"></i> واحدها</a></li>
+      <li><a href="#"><i class="uil uil-wrench"></i> امکانات</a></li>
+      <li><a href="#"><i class="uil uil-user"></i> نگهبانی / مدیریت</a></li>
+      <li><a href="Paybill.html"><i class="uil uil-credit-card"></i> پرداخت شارژ</a></li>
+      <li><a href="#"><i class="uil uil-phone"></i> تماس با ما</a></li>
+    </ul>
+  
+    <div class="search-container" id="searchToggle">
+      <i class="uil uil-search search-icon" id="searchIcon"></i>
+      <span class="search-label">جستجو</span>
+    </div>
+  
+    <div class="search-box">
+      <i class="uil uil-search search-icon"></i>
+      <input type="text" placeholder="جستجو کنید...." />
+    </div>
+  </nav>
+  
+ 
+
+  <main class="introduction">
+    <section>
+      <h2 id="typing-text"></h2>
+      <h4>زندگی در قلب تهران</h4>
+  
+ 
+  
+      <!-- تب های تعاملی -->
+      <div class="tabs">
+        <nav class="tab-buttons">
+          <button class="tab-btn active" data-tab="overview">معرفی برج</button>
+          <button class="tab-btn" data-tab="units">واحدها</button>
+          <button class="tab-btn" data-tab="facilities">امکانات</button>
+          <button class="tab-btn" data-tab="location">موقعیت</button>
+        </nav>
+  
+        <div class="tab-content active" id="overview">
+          <p>
+            برج <strong>روما رزیدنس</strong>، با <strong>۱۸ طبقه</strong> و ارتفاع <strong>۷۱ متر</strong>، مجموعه‌ای لوکس و بی‌نظیر است.
+            <br>لابی باشکوه، پارکینگ اختصاصی، و دسترسی آسان از خیابان‌های کامرانیه و شیبانی بخشی از ویژگی‌های برج است.
+          </p>
+        </div>
+  
+        <div class="tab-content" id="units">
+          <p>تعداد واحدهای مسکونی در برج:</p>
+          <ul>
+            <li>طبقات ۱ تا ۵: <span class="count" data-target="30">0</span> واحد</li>
+            <li>طبقات ۶ تا ۱۳: <span class="count" data-target="32">0</span> واحد</li>
+            <li>طبقات ۱۴ و ۱۵: <span class="count" data-target="3">0</span> پنت‌هاوس</li>
+          </ul>
+        </div>
+  
+        <div class="tab-content" id="facilities">
+          <ul>
+            <li>سالن ورزشی و استخر</li>
+            <li>فضای سبز و پارک کودکان</li>
+            <li>امنیت ۲۴ ساعته و دوربین‌های مداربسته</li>
+            <li>آسانسورهای پرسرعت</li>
+            <li>پارکینگ اختصاصی</li>
+          </ul>
+        </div>
+  
+        <div class="tab-content" id="location">
+          <p>
+            برج در محله کامرانیه شمالی، نزدیک خیابان شیبانی واقع شده است.
+            دسترسی سریع به مراکز خرید و حمل‌ونقل عمومی دارد.
+          </p>
+        </div>
+      </div>
+  
+      <!-- نوار پیشرفت خواندن -->
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+  
+      <!-- دکمه درخواست بازدید -->
+      <button id="visit-btn" class="btn">درخواست بازدید</button>
+  
+      <!-- پاپ‌آپ فرم بازدید -->
+      <div id="visit-popup" class="popup hidden">
+        <div class="popup-content">
+          <button id="close-popup" class="close-btn" aria-label="بستن فرم">&times;</button>
+          <h3>فرم درخواست بازدید</h3>
+          <form id="visit-form" novalidate>
+            <label for="name">نام و نام خانوادگی:</label>
+            <input type="text" id="name" name="name" required minlength="3" />
+            <label for="phone">شماره تلفن:</label>
+            <input type="tel" id="phone" name="phone" pattern="^09\d{9}$" required placeholder="مثلاً 09123456789" />
+            <label for="date">تاریخ مورد نظر بازدید:</label>
+            <input type="date" id="date" name="date" required />
+            <button type="submit" class="btn submit-btn">ارسال درخواست</button>
+            <p id="form-message" role="alert"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  
+    <style>
+      /* ساده‌سازی css مرتبط با main فقط برای فهم بهتر */
+      .slider {
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      }
+      .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+      .slide {
+        min-width: 100%;
+        display: none;
+        user-select: none;
+      }
+      .slide.active {
+        display: block;
+      }
+      .slider-btn {
+        position: absolute;
+        top: 50%;
+        background: rgba(0,0,0,0.5);
+        border: none;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 0 0.5rem;
+        transform: translateY(-50%);
+        z-index: 10;
+        border-radius: 4px;
+      }
+      .prev {
+        left: 10px;
+      }
+      .next {
+        right: 10px;
+      }
+      .tabs {
+        margin-top: 1.5rem;
+        direction: rtl;
+      }
+      .tab-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-start;
+        border-bottom: 2px solid #ccc;
+      }
+      .tab-btn {
+        background: none;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        color: #555;
+        border-bottom: 3px solid transparent;
+        transition: color 0.3s, border-bottom-color 0.3s;
+      }
+      .tab-btn.active {
+        color: #007bff;
+        border-bottom-color: #007bff;
+      }
+      .tab-content {
+        display: none;
+        padding: 1rem 0;
+        color: #333;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+      .tab-content.active {
+        display: block;
+      }
+      .count {
+        font-weight: bold;
+        color: #007bff;
+        font-size: 1.2rem;
+      }
+      #progress-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background: #e0e0e0;
+        z-index: 1000;
+      }
+      #progress-bar {
+        height: 100%;
+        width: 0;
+        background: #007bff;
+        transition: width 0.25s;
+      }
+      #visit-btn {
+        margin-top: 2rem;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-size: 1.1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      #visit-btn:hover {
+        background-color: #0056b3;
+      }
+      .popup {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0,0,0,0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1100;
+      }
+      .popup.hidden {
+        display: none;
+      }
+      .popup-content {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 400px;
+        position: relative;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        direction: rtl;
+        font-family: 'Vazirmatn', sans-serif;
+      }
+      .close-btn {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #555;
+      }
+      label {
+        display: block;
+        margin-top: 1rem;
+        font-weight: 600;
+      }
+      h3{
+        color: black;
+      }
+      input {
+        width: 100%;
+        padding: 0.5rem;
+        margin-top: 0.25rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-family: 'Vazirmatn', sans-serif;
+      }
+      .submit-btn {
+        margin-top: 1.5rem;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1.1rem;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .submit-btn:hover {
+        background-color: #0056b3;
+      }
+      #form-message {
+        margin-top: 1rem;
+        color: red;
+        font-weight: 600;
+        min-height: 1.2rem;
+      }
+    </style>
+  
+    <script>
+      // تایپ متن متحرک
+      const typingText = "برج روما رزیدنس: زندگی لوکس، آرامش بی‌نظیر، در قلب کامرانیه";
+      let idx = 0;
+      function typeEffect() {
+        if (idx < typingText.length) {
+          document.getElementById('typing-text').textContent += typingText.charAt(idx);
+          idx++;
+          setTimeout(typeEffect, 80);
+        }
+      }
+      typeEffect();
+  
+  
+      // تب ها
+      const tabButtons = document.querySelectorAll('.tab-btn');
+      const tabContents = document.querySelectorAll('.tab-content');
+  
+      tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          tabButtons.forEach(btn => btn.classList.remove('active'));
+          tabContents.forEach(content => content.classList.remove('active'));
+          button.classList.add('active');
+          document.getElementById(button.dataset.tab).classList.add('active');
+        });
+      });
+  
+      // انیمیشن شمارش اعداد
+      function animateCount(el) {
+        const target = +el.getAttribute('data-target');
+        let count = 0;
+        const step = Math.ceil(target / 50);
+        const interval = setInterval(() => {
+          count += step;
+          if (count >= target) {
+            el.textContent = target;
+            clearInterval(interval);
+          } else {
+            el.textContent = count;
+          }
+        }, 30);
+      }
+  
+      tabButtons.forEach(button => {
+        if(button.dataset.tab === 'units') {
+          button.addEventListener('click', () => {
+            const counts = document.querySelectorAll('.count');
+            counts.forEach(el => animateCount(el));
+          });
+        }
+      });
+  
+     
+
+      
+  
+      
+    </script>
+  </main>
+  
+  
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="content">
+      <div class="top">
+        <div class="logo-details">
+          <i class="fas fa-building"></i>
+          <span class="logo_name">برج روما رزیدنس</span>
+        </div>
+        <div class="media-icons">
+          <a href="#" title="تلگرام"><i class="fab fa-telegram-plane"></i></a>
+          <a href="#" title="اینستاگرام"><i class="fab fa-instagram"></i></a>
+          <a href="#" title="واتساپ"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" title="فیسبوک"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" title="ایمیل"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">درباره ما</li>
+          <li><a href="#">صفحه اصلی</a></li>
+          <li><a href="#">تماس با ما</a></li>
+          <li><a href="#">درباره برج</a></li>
+          <li><a href="#">پشتیبانی</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">خدمات</li>
+          <li><a href="#">رزرو امکانات</a></li>
+          <li><a href="#">نگهبانی ۲۴ ساعته</a></li>
+          <li><a href="#">اعلان خرابی</a></li>
+          <li><a href="#">نظافت و نگهداری فضای سبز</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">حساب کاربری</li>
+          <li><a href="#">مدیریت واحدها</a></li>
+          <li><a href="#">ورود ساکنین</a></li>
+          <li><a href="#">پرداخت شارژ</a></li>
+          <li><a href="#">بارگذاری عکس پرداختی ها</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">واحدها</li>
+          <li><a href="#">واحدهای یک خوابه</a></li>
+          <li><a href="#">واحدهای دو خوابه</a></li>
+          <li><a href="#">واحدهای سه خوابه</a></li>
+          <li><a href="#">پنت‌هاوس</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">اطلاعات بیشتر</li>
+          <li><a href="#">اطلاعیه‌ها</a></li>
+          <li><a href="#">قوانین و مقررات</a></li>
+          <li><a href="#">پرسش‌های متداول</a></li>
+          <li><a href="#">راهنما</a></li>
+        </ul>
+
+        <div class="box contact-with-icons">
+          <address class="contact-info">
+            <p class="link_name">ارتباط با ما</p>
+            <p class="no-wrap">📍 تهران، محله دزاشیب، خیابان کامرانیه شمالی (شهید بازدار)، خیابان شیبانی، پلاک ۳۶</p>
+            <p>☎️ ۰۲۱-۲۲۳۳۴۵۶۷</p>
+            <p>📱 ۰۹۱۲-۱۲۳۴۵۶۷</p>
+            <p>📧 romaresidence@gmail.com</p>
+          </address>
+
+          <div class="trust-icons-inline">
+            <img src="./img/emmad.png" alt="نماد اعتماد">
+            <img src="./img/samandehi.png" alt="نماد ساماندهی">
+            <img src="./img/senf.webp" alt="نماد کسب و کار اینترنتی">
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-details">
+        <div class="bottom_text">
+          <span>2025 – 2013 © برج روما رزیدنس | تمامی حقوق محفوظ است.</span>
+          <span class="policy_terms">
+            <a href="#">حریم خصوصی</a>
+            <a href="#">شرایط استفاده</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

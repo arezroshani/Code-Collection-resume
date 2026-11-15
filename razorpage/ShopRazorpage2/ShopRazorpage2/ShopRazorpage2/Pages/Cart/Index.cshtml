@@ -1,0 +1,245 @@
+﻿@page
+@model ShopRazorpage2.Pages.Cart.IndexModel
+
+<h2 class="text-center mb-4 fw-bold">🛒 سبد خرید شما</h2>
+
+@if (!Model.CartItems.Any())
+{
+    <div class="alert alert-info text-center py-5 rounded shadow-sm" style="font-size:1.15rem;">
+        سبد خرید شما خالی است.
+    </div>
+}
+else
+{
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="row g-3">
+                @foreach (var item in Model.CartItems)
+                {
+                    var discountPercent = (item.IsDiscounted && item.DiscountPrice.HasValue && item.Price != 0)
+                    ? (int)System.Math.Round((item.Price - item.DiscountPrice.Value) / item.Price * 100)
+                    : 0;
+
+                    <div class="col-md-6">
+                        <div class="card cart-item shadow-sm border-0 rounded-4 overflow-hidden"
+                             data-id="@item.ProductId"
+                             data-unit-price="@item.UnitPrice"
+                             data-price="@item.Price"
+                             data-discount="@item.TotalDiscount">
+
+                            <div class="position-relative product-img-container">
+                                <img src="@item.ImageUrl" class="product-img" alt="@item.Name" />
+                                @if (item.IsDiscounted && item.DiscountPrice.HasValue)
+                                {
+                                    <span class="badge bg-danger discount-badge">٪@discountPercent تخفیف</span>
+                                }
+                            </div>
+
+
+                            <div class="card-body position-relative">
+                                <!-- آیکون حذف کنار قیمت -->
+                                <form method="post" asp-page="/Cart/Remove" class="position-absolute top-0 start-0 m-2">
+                                    <input type="hidden" name="ProductId" value="@item.ProductId" />
+                                    <button type="submit" class="btn btn-danger btn-lg" title="حذف محصول">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </form>
+
+                                <h6 class="fw-bold text-truncate mb-2">@item.Name</h6>
+
+                                <div class="mb-2">
+                                    @if (item.IsDiscounted && item.DiscountPrice.HasValue)
+                                    {
+                                        <span class="text-muted text-decoration-line-through small">@item.Price.ToString("N0")</span>
+                                        <span class="text-primary fw-bold fs-5 ms-2 unit-price-display">@item.UnitPrice.ToString("N0")</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-primary fw-bold fs-5 unit-price-display">@item.UnitPrice.ToString("N0")</span>
+                                    }
+                                </div>
+
+                                @if (item.TotalDiscount > 0)
+                                {
+                                    <div class="text-success small mb-2">
+                                        شما @item.TotalDiscount.ToString("N0") تومان صرفه‌جویی کردید
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="small mb-2" style="visibility:hidden;">placeholder</div>
+                                }
+
+
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="quantity-box d-flex align-items-center">
+                                        <button class="btn-qty minus">-</button>
+                                        <input type="text" readonly class="form-control text-center quantity-input" value="@item.Quantity" style="width:46px;" />
+                                        <button class="btn-qty plus">+</button>
+                                    </div>
+
+                                    <div class="fw-bold text-success product-total">@item.Total.ToString("N0") تومان</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="sticky-top p-4 glass-summary" style="top:20px;">
+                <h5 class="fw-bold mb-3">خلاصه سفارش</h5>
+                <div class="d-flex justify-content-between mb-2">
+                    <span>جمع کالاها</span>
+                    <span id="subtotal">0 تومان</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2 text-danger">
+                    <span>تخفیف</span>
+                    <span id="discount">0 تومان</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <span>هزینه ارسال</span>
+                    <span id="shipping">150,000 تومان</span>
+                </div>
+                <hr />
+                <div class="d-flex justify-content-between fw-bold fs-5">
+                    <span>جمع نهایی</span>
+                    <span id="grand-total">0 تومان</span>
+                </div>
+                <a href="/Checkout" class="btn btn-gradient btn-lg w-100 mt-4">تسویه حساب و پرداخت</a>
+            </div>
+        </div>
+    </div>
+}
+
+<style>
+    .cart-item {
+        transition: all .28s ease;
+    }
+
+        .cart-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,.12);
+        }
+
+    /* عکس بزرگتر */
+    .product-img-container {
+        width: 100%;
+        height: 340px; /* ارتفاع ثابت برای همه محصولات */
+        overflow: hidden;
+        border-radius: 0.5rem;
+        position: relative;
+    }
+
+        .product-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* پر کردن کامل کادر بدون کشیده شدن */
+            transition: transform .35s ease;
+        }
+
+        .product-img-container:hover img {
+            transform: scale(1.05); /* افکت بزرگ شدن روی هاور */
+        }
+
+
+    .discount-badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        border-radius: 10px;
+        padding: .35rem .6rem;
+    }
+
+    .quantity-box {
+        background: #f7f7f8;
+        border-radius: 30px;
+        padding: 4px;
+    }
+
+    .btn-qty {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+        background: #fff;
+    }
+
+        .btn-qty:hover {
+            background: #0d6efd;
+            color: #fff;
+        }
+
+    .quantity-input {
+        width: 46px;
+        border: none;
+        background: transparent;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .btn-gradient {
+        background: linear-gradient(135deg,#28a745,#218838);
+        color: #fff;
+        border: none;
+    }
+
+    .glass-summary {
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 1rem;
+        box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const SHIPPING = 150000;
+
+        function recalcAll() {
+            let subtotal = 0;
+            let discountTotal = 0;
+
+            document.querySelectorAll('.cart-item').forEach(card => {
+                const qtyInput = card.querySelector('.quantity-input');
+                const qty = parseInt(qtyInput.value, 10) || 1;
+                const unitPrice = parseFloat(card.dataset.unitPrice) || 0;
+                const originalPrice = parseFloat(card.dataset.price) || unitPrice;
+
+                const total = unitPrice * qty;
+                card.querySelector('.product-total').textContent = total.toLocaleString() + ' تومان';
+
+                subtotal += originalPrice * qty;
+                discountTotal += (originalPrice - unitPrice) * qty;
+            });
+
+            const grand = subtotal - discountTotal + SHIPPING;
+
+            document.getElementById('subtotal').textContent = subtotal.toLocaleString() + ' تومان';
+            document.getElementById('discount').textContent = discountTotal.toLocaleString() + ' تومان';
+            document.getElementById('shipping').textContent = SHIPPING.toLocaleString() + ' تومان';
+            document.getElementById('grand-total').textContent = grand.toLocaleString() + ' تومان';
+        }
+
+        document.querySelectorAll('.cart-item').forEach(card => {
+            const plus = card.querySelector('.plus');
+            const minus = card.querySelector('.minus');
+            const qtyInput = card.querySelector('.quantity-input');
+
+            plus.addEventListener('click', () => {
+                qtyInput.value = (parseInt(qtyInput.value, 10) + 1).toString();
+                recalcAll();
+            });
+
+            minus.addEventListener('click', () => {
+                qtyInput.value = Math.max(1, parseInt(qtyInput.value, 10) - 1).toString();
+                recalcAll();
+            });
+        });
+
+        recalcAll();
+    });
+</script>

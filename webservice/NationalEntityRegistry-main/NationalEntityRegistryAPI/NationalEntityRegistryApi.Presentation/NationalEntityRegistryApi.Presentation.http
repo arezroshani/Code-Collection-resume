@@ -1,0 +1,6 @@
+@NationalEntityRegistryApi.Presentation_HostAddress = http://localhost:5233
+
+GET {{NationalEntityRegistryApi.Presentation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

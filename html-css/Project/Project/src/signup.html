@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ثبت نام کاربر</title>
+    <link rel="icon" href="./img/user-profile_5675043.png" type="image/png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@30.1.0/dist/font-face.css" />
+    
+  </head>
+
+  <body dir="rtl" class="bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center px-4" style="background-image: url('./img/st-pauls-cathedral-3840x2160-london-england-tourism-travel-night-4432.jpg');">
+    <div class="relative w-full max-w-[450px] bg-transparent rounded-[12px] border-2 border-white/50 shadow-[0_0_12px_rgba(0,0,0,0.2)] backdrop-blur-[8px] flex justify-center items-center flex-col py-6 sm:py-[40px] animate-fade-in">
+      <!-- حذف شد: onsubmit -->
+      <!-- فقط بخش فرم داخل صفحه، بهینه‌سازی‌شده: -->
+<form class="w-full flex flex-col items-center" id="signupForm">
+  <h2 class="text-white text-2xl sm:text-[2em] text-center font-[Vazirmatn] mb-6 sm:mb-[32px]">ثبت‌ نام</h2>
+
+  <!-- نام کامل -->
+  <div class="input-wrapper relative w-full max-w-[350px] border-b border-white my-5">
+    <input type="text" id="fullname"  class="w-full h-12 bg-transparent border-none outline-none text-white pr-10 pl-2 text-base" />
+    <label for="fullname" class="absolute right-12 top-1/2 -translate-y-1/2 text-white text-lg transition-all duration-300">نام کامل</label>
+    <span class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-lg"><i class="uil uil-user"></i></span>
+  </div>
+
+  <!-- ایمیل -->
+  <div class="input-wrapper relative w-full max-w-[350px] border-b border-white my-5">
+    <input type="email" id="email" required class="w-full h-12 bg-transparent border-none outline-none text-white pr-10 pl-2 text-base" />
+    <label for="email" class="absolute right-12 top-1/2 -translate-y-1/2 text-white text-lg transition-all duration-300">ایمیل</label>
+    <span class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-lg"><i class="uil uil-envelope"></i></span>
+  </div>
+
+  <!-- رمز عبور -->
+  <div class="input-wrapper relative w-full max-w-[350px] border-b border-white my-5">
+    <input type="password" id="password" required class="w-full h-12 bg-transparent border-none outline-none text-white pr-10 pl-2 text-base" />
+    <label for="password" class="absolute right-12 top-1/2 -translate-y-1/2 text-white text-lg transition-all duration-300">رمز عبور</label>
+    <span class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-lg"><i class="uil uil-lock"></i></span>
+    <span onclick="togglePassword('password', 'eyeIcon1')" class="absolute left-2 top-1/2 -translate-y-1/2 text-white text-lg cursor-pointer">
+      <ion-icon id="eyeIcon1" name="eye-outline"></ion-icon>
+    </span>
+  </div>
+
+  <!-- تأیید رمز عبور -->
+  <div class="input-wrapper relative w-full max-w-[350px] border-b border-white my-5">
+    <input type="password" id="confirm-password" required class="w-full h-12 bg-transparent border-none outline-none text-white pr-10 pl-2 text-base" />
+    <label for="confirm-password" class="absolute right-12 top-1/2 -translate-y-1/2 text-white text-lg transition-all duration-300">تأیید رمز عبور</label>
+    <span class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-lg"><i class="uil uil-lock-access"></i></span>
+    <span onclick="togglePassword('confirm-password', 'eyeIcon2')" class="absolute left-2 top-1/2 -translate-y-1/2 text-white text-lg cursor-pointer">
+      <ion-icon id="eyeIcon2" name="eye-outline"></ion-icon>
+    </span>
+  </div>
+
+  <!-- قوانین -->
+  <div class="flex items-center text-white text-sm w-full max-w-[350px] mt-3 mb-6 gap-2">
+
+    <input type="checkbox" id="terms" class="accent-white w-4 h-4" />
+<label for="terms" class="text-white">
+  <a href="#" class="text-white hover:underline">با شرایط و قوانین موافقم</a>
+</label>
+
+  </div>
+
+  <!-- دکمه ثبت نام -->
+  <button type="submit" id="signupBtn" class="group w-full max-w-[340px] h-[52px] mt-2 mb-2 rounded-[30px] bg-gradient-to-r from-[#f5f1e0] to-[#fff] text-[#4b3d2f] text-lg font-bold tracking-wide flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(245,241,224,0.4)] hover:shadow-[0_8px_30px_rgba(245,241,224,0.6)] hover:bg-gradient-to-r hover:from-[#f0e6cc] hover:to-[#fefefe] hover:text-[#3a2f22] hover:scale-[1.05] transition-all duration-300 ease-in-out border border-[#e7dcc5]">
+    <ion-icon name="person-add-outline" class="text-xl transition-transform duration-300 group-hover:translate-x-1"></ion-icon>
+    ثبت‌ نام
+  </button>
+
+  <!-- لینک ورود -->
+  <div class="text-white text-sm text-center mt-7 mb-2">
+    <p>قبلاً ثبت‌ نام کرده‌اید؟ <a href="login.html" class="font-bold hover:underline">وارد شوید</a></p>
+  </div>
+</form>
+
+    </div>
+
+    <!-- Toast پیغام خطا -->
+    <div id="error-toast" class="hidden fixed top-6 right-6 max-w-xs bg-red-600 text-white rounded-xl shadow-lg px-4 py-3 z-50 transition-all duration-500 opacity-0 scale-95">
+      <div class="flex items-center gap-2">
+        <ion-icon name="alert-circle-outline" class="text-xl"></ion-icon>
+        <span id="error-message" class="text-sm"></span>
+      </div>
+    </div>
+    <div id="success-toast" class="hidden fixed bottom-5 right-5 bg-green-600 text-white px-4 py-3 rounded shadow-lg opacity-0 scale-95 transition-all duration-500 z-50">
+      اطلاعات شما با موفقیت ذخیره شد!
+    </div>
+    <div id="success-toast" class="fixed bottom-6 left-6 bg-green-500 text-white px-4 py-2 rounded shadow transition duration-300 opacity-0 scale-95 hidden z-50">
+       ثبت نام شما با موفقیت انجام شد.
+    </div>
+    
+
+    <!-- آیکون‌ها -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   
+    
+  </body>
+</html>

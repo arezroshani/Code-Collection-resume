@@ -1,0 +1,6 @@
+services:
+  nationalentityregistryapi.presentation:
+    image: ${DOCKER_REGISTRY-}nationalentityregistryapipresentation
+    build:
+      context: .
+      dockerfile: NationalEntityRegistryApi.Presentation/Dockerfile
